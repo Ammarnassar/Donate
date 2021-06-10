@@ -20,7 +20,7 @@
     <div class="navbar-area">
         <!-- Menu For Mobile Device -->
         <div class="mobile-nav">
-            <a href="index.html" class="logo">
+            <a href="{{route('home')}}" class="logo">
                 <img src="{{asset('temp/nivo/assets/img/nivo-logo.png')}}" alt="Nivo Logo">
             </a>
         </div>
@@ -30,7 +30,7 @@
             <div class="main-nav">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <div class="container">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="{{route('home')}}">
                             <img src="{{asset('temp/nivo/assets/img/nivo-logo.png')}}" alt="Nivo Logo">
                         </a>
 

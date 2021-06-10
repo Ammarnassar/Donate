@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('main')
+
+    @include('layouts.page-title' , ['pageRoute' => 'contact' , 'currentPageName' => 'Contact' , 'previousPageName' => '' , 'previousPageRoute' => '' , 'background' => ''])
+
     <!-- Start Contact Box Area -->
     <section class="contact-box ptb-100-70">
         <div class="container">
@@ -108,4 +111,5 @@
         </div>
     </section>
     <!-- End Contact Area -->
+
 @endsection

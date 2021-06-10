@@ -19,6 +19,7 @@ Route::group([
 
     Route::group(['as' => 'blog.' , 'prefix' => 'blog'] , function (){
         Route::view('/index' , 'blog.index')->name('index');
+        Route::view('/show' , 'blog.show')->name('show');
     });
 
 });

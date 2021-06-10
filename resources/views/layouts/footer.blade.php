@@ -1,25 +1,13 @@
 <!-- Start Footer Top Area -->
 <section class="footer-top-area ptb-100-70">
     <div class="container">
-        <div class="section-title">
-            <span>Stay Updated</span>
-            <h2>Newsletter</h2>
-            <div class="widget subscribe">
-                <form class="newsletter-form subscribe-form" data-toggle="validator">
-                    <input type="email" class="input-newsletter subscribe-field" placeholder="Enter email address" name="EMAIL" required autocomplete="off">
-
-                    <button type="submit" class="search-submit default-btn subscribe-submit">Sbuscribe</button>
-                    <div id="validator-newsletter" class="form-result"></div>
-                </form>
-            </div>
-        </div>
         <div class="row">
             <div class="col-lg-4 col-sm-6 col-md-6">
                 <div class="single-widget">
                     <a href="index.html">
                         <img src="{{asset('temp/nivo/assets/img/white-logo.png')}}" alt="">
                     </a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultric gravida. Risus commodo viverra maecenas accumn lacus vel facilisis.</p>
+                    <p>{{__('Donate is a platform for collect money !')}}</p>
                     <ul class="social-icon">
                         <li>
                             <a href="#">
@@ -36,83 +24,56 @@
                                 <i class="fa fa-linkedin"></i>
                             </a>
                         </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-6 col-md-6">
+                <div class="single-widget">
+                    <h3>{{__('Case Categories')}}</h3>
+                    <ul>
                         <li>
-                            <a href="#">
-                                <i class="fa fa-pinterest-p"></i>
-                            </a>
+                            <a href="#">{{__('Medical')}}</a>
+                        </li>
+                        <li>
+                            <a href="#">{{__('Education')}}</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-2 col-sm-6 col-md-6">
                 <div class="single-widget">
-                    <h3>Fundraised More</h3>
+                    <h3>{{__('Pages')}}</h3>
                     <ul>
                         <li>
-                            <a href="#">Medical</a>
+                            <a href="{{route('causes.index')}}">{{__('Causes')}}</a>
                         </li>
                         <li>
-                            <a href="#">Memorial</a>
+                            <a href="{{route('blog.index')}}">{{__('Blog')}}</a>
                         </li>
                         <li>
-                            <a href="#">Emergency</a>
+                            <a href="{{route('about')}}">{{__('About')}}</a>
                         </li>
                         <li>
-                            <a href="#">Education</a>
-                        </li>
-                        <li>
-                            <a href="#">Charity</a>
-                        </li>
-                        <li>
-                            <a href="#">Organization</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-6 col-md-6">
-                <div class="single-widget">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li>
-                            <a href="#">Help Center</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog</a>
-                        </li>
-                        <li>
-                            <a href="#">Press Center</a>
-                        </li>
-                        <li>
-                            <a href="#">Careers</a>
-                        </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
+                            <a href="{{route('contact')}}">{{__('Contact')}}</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 col-md-6">
                 <div class="single-widget">
-                    <h3>Address</h3>
+                    <h3>{{__('Address')}}</h3>
                     <ul class="address">
                         <li>
                             <i class="fa fa-map-marker"></i>
-                            660 Brooklyn street, New York street
+                            {{__('Amman , Jordan')}}
                         </li>
                         <li>
                             <i class="fa fa-envelope"></i>
-                            <a href="mailto:hello@nivo.com">hello@nivo.com</a>
-                        </li>
-                        <li>
-                            <i class="fa fa-envelope"></i>
-                            <a href="mailto:hello@info.com">hello@info.com</a>
+                            <a href="mailto:hello@nivo.com">info@donate.com</a>
                         </li>
                         <li>
                             <i class="fa fa-phone"></i>
-                            <a href="tel:+(321)-948-754">+(321) 948 754</a>
+                            <a href="tel:+962789611469">+962789611469</a>
                         </li>
                     </ul>
                 </div>
@@ -129,15 +90,14 @@
             <div class="col-lg-6 col-md-6">
                 <div>
                     <p>
-                        Copyright <i class="fa fa-copyright"></i>2021 Nivo. Designed By
-                        <a href="https://envytheme.com/" target="_blank">EnvyTheme</a>
+                        {{__('Copyright')}} <i class="fa fa-copyright"></i> 2021 Donate .
                     </p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
                 <ul class="terms-conditions">
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">{{__('Terms & Conditions')}}</a></li>
+                    <li><a href="#">{{__('Privacy Policy')}}</a></li>
                 </ul>
             </div>
         </div>

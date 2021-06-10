@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('main')
+
+    @include('layouts.page-title' , ['pageRoute' => 'blog.show' , 'currentPageName' => 'About' , 'previousPageName' => '' , 'previousPageRoute' => '' , 'background' => ''])
+
     <!-- Start About Area -->
     <section class="about-area abouts-areas ptb-100 two">
         <div class="container">

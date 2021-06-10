@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('main')
+    @include('layouts.page-title' , ['pageRoute' => 'causes.index' , 'currentPageName' => 'Causes' , 'previousPageName' => '' , 'previousPageRoute' => '' , 'background' => '/temp/nivo/assets/img/page-banner/5.jpg'])
     <!-- Start Good Causes Area -->
     <section class="good-causes-area ptb-100-70">
         <div class="container">

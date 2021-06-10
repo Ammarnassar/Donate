@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('main')
+    @include('layouts.page-title' , ['pageRoute' => 'blog.index' , 'currentPageName' => 'Blog' , 'previousPageName' => '' , 'previousPageRoute' => '' , 'background' => ''])
+
     <!-- Start Latest News Area -->
     <section class="blog-area ptb-100">
         <div class="container">
@@ -8,8 +10,8 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-news">
                         <div class="news-img">
-                            <a href="blog-details.html">
-                                <img src="assets/img/news/1.jpg" alt="News">
+                            <a href="{{route('blog.show')}}">
+                                <img src="{{asset('temp/nivo/assets/img/news/1.jpg')}}" alt="News">
                             </a>
                             <div class="date">
                                 <span>1 November</span>
@@ -40,11 +42,11 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-news">
                         <div class="news-img">
-                            <a href="blog-details.html">
-                                <img src="assets/img/news/2.jpg" alt="News">
+                            <a href="{{route('blog.show')}}">
+                                <img src="{{asset('temp/nivo/assets/img/news/1.jpg')}}" alt="News">
                             </a>
                             <div class="date">
-                                <span>2 November</span>
+                                <span>1 November</span>
                             </div>
                         </div>
                         <div class="news-text">
@@ -60,9 +62,7 @@
                                 </li>
                             </ul>
                             <h3>
-                                <a href="blog-details.html">
-                                    A place start a new life with peace
-                                </a>
+                                <a href="blog-details.html">Highlight some of the fundraising</a>
                             </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
                             <a class="read-more" href="blog-details.html">
@@ -74,11 +74,11 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-news">
                         <div class="news-img">
-                            <a href="blog-details.html">
-                                <img src="assets/img/news/3.jpg" alt="News">
+                            <a href="{{route('blog.show')}}">
+                                <img src="{{asset('temp/nivo/assets/img/news/1.jpg')}}" alt="News">
                             </a>
                             <div class="date">
-                                <span>3 November</span>
+                                <span>1 November</span>
                             </div>
                         </div>
                         <div class="news-text">
@@ -94,7 +94,7 @@
                                 </li>
                             </ul>
                             <h3>
-                                <a href="blog-details.html">Build school for poor children</a>
+                                <a href="blog-details.html">Highlight some of the fundraising</a>
                             </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
                             <a class="read-more" href="blog-details.html">
@@ -106,11 +106,11 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-news">
                         <div class="news-img">
-                            <a href="blog-details.html">
-                                <img src="assets/img/news/4.jpg" alt="News">
+                            <a href="{{route('blog.show')}}">
+                                <img src="{{asset('temp/nivo/assets/img/news/1.jpg')}}" alt="News">
                             </a>
                             <div class="date">
-                                <span>1 Jun</span>
+                                <span>1 November</span>
                             </div>
                         </div>
                         <div class="news-text">
@@ -126,9 +126,7 @@
                                 </li>
                             </ul>
                             <h3>
-                                <a href="blog-details.html">
-                                    Support for Children
-                                </a>
+                                <a href="blog-details.html">Highlight some of the fundraising</a>
                             </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
                             <a class="read-more" href="blog-details.html">
@@ -140,11 +138,11 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-news">
                         <div class="news-img">
-                            <a href="blog-details.html">
-                                <img src="assets/img/news/5.jpg" alt="News">
+                            <a href="{{route('blog.show')}}">
+                                <img src="{{asset('temp/nivo/assets/img/news/1.jpg')}}" alt="News">
                             </a>
                             <div class="date">
-                                <span>2 Julay</span>
+                                <span>1 November</span>
                             </div>
                         </div>
                         <div class="news-text">
@@ -160,9 +158,7 @@
                                 </li>
                             </ul>
                             <h3>
-                                <a href="blog-details.html">
-                                    Capetown orphanage
-                                </a>
+                                <a href="blog-details.html">Highlight some of the fundraising</a>
                             </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
                             <a class="read-more" href="blog-details.html">
@@ -174,11 +170,11 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-news">
                         <div class="news-img">
-                            <a href="blog-details.html">
-                                <img src="assets/img/news/6.jpg" alt="News">
+                            <a href="{{route('blog.show')}}">
+                                <img src="{{asset('temp/nivo/assets/img/news/1.jpg')}}" alt="News">
                             </a>
                             <div class="date">
-                                <span>3 Appril</span>
+                                <span>1 November</span>
                             </div>
                         </div>
                         <div class="news-text">
@@ -194,7 +190,7 @@
                                 </li>
                             </ul>
                             <h3>
-                                <a href="blog-details.html">Home For Homeless</a>
+                                <a href="blog-details.html">Highlight some of the fundraising</a>
                             </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
                             <a class="read-more" href="blog-details.html">

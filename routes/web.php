@@ -4,22 +4,21 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::group([
     'prefix' => LaravelLocalization::setLocale(),
     'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
 
     Route::view('/' , 'home')->name('home');
+    Route::view('/about' , 'about')->name('about');
+    Route::view('/contact' , 'contact')->name('contact');
+
+    Route::group(['as' => 'causes.' , 'prefix' => 'causes'] , function (){
+        Route::view('/index' , 'causes.index')->name('index');
+    });
+
+    Route::group(['as' => 'blog.' , 'prefix' => 'blog'] , function (){
+        Route::view('/index' , 'blog.index')->name('index');
+    });
 
 });

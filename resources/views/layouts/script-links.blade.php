@@ -22,5 +22,12 @@
 <script src="{{asset('temp/nivo/assets/js/contact-form-script.js')}}"></script>
 <!-- Ajaxchimp Min JS -->
 <script src="{{asset('temp/nivo/assets/js/ajaxchimp.min.js')}}"></script>
-<!-- Custom JS -->
-<script src="{{asset('temp/nivo/assets/js/custom.js')}}"></script>
+
+
+@if (\Illuminate\Support\Facades\App::getLocale() == 'ar')
+    <!-- Custom JS -->
+    <script src="{{asset('temp/nivo/assets/js/custom-rtl.js')}}"></script>
+@else
+    <!-- Custom JS -->
+    <script src="{{asset('temp/nivo/assets/js/custom.js')}}"></script>
+@endif

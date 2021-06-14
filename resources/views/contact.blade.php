@@ -12,8 +12,8 @@
                     <div class="single-contact-box">
                         <i class="fa fa-map-marker"></i>
                         <div class="contect-title">
-                            <h3>Address</h3>
-                            <p>660 Brooklyn street, New <br> York street</p>
+                            <h3>{{__('Address')}}</h3>
+                            <p>{{__('Amman , Jordan')}}</p>
                         </div>
                     </div>
                 </div>
@@ -21,7 +21,7 @@
                     <div class="single-contact-box">
                         <i class="fa fa-envelope"></i>
                         <div class="contect-title">
-                            <h3>Email</h3>
+                            <h3>{{__('Email')}}</h3>
                             <a href="mailto:hello@nivo.com">hello@nivo.com</a>
                             <a href="mailto:info@nivo.com">info@nivo.com</a>
                         </div>
@@ -31,7 +31,7 @@
                     <div class="single-contact-box">
                         <i class="fa fa-phone"></i>
                         <div class="contect-title">
-                            <h3>Phone</h3>
+                            <h3>{{__('Phone')}}</h3>
                             <a href="tel:+44-587-154756">+44 587 154756</a>
                             <a href="tel:+44-587-154756">+55 5555 14574</a>
                         </div>
@@ -46,8 +46,8 @@
     <section class="contact-area pb-100">
         <div class="container">
             <div class="section-title">
-                <h2>Drop us message for any query</h2>
-                <p>If you have an idea, we would love to hear about it.</p>
+                <h2>{{__('Drop us message for any query')}}</h2>
+                <p>{{__('If you have an idea, we would love to hear about it')}}.</p>
             </div>
 
             <div class="row align-items-center">
@@ -57,42 +57,42 @@
                             <div class="row">
                                 <div class="col-lg-6 col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name">
+                                        <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="{{__('Your Name')}}">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-sm-6">
                                     <div class="form-group">
-                                        <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Your Email">
+                                        <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="{{__('Your Email')}}">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone">
+                                        <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="{{__('Your Phone')}}">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Subject">
+                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="{{__('Subject')}}">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message" placeholder="Your Message"></textarea>
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message" placeholder="{{__('Your Message')}}"></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12 col-md-12">
                                     <button type="submit" class="default-btn">
-                                        <span>Send Message</span>
+                                        <span>{{__('Send Message')}}</span>
                                     </button>
                                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                                     <div class="clearfix"></div>

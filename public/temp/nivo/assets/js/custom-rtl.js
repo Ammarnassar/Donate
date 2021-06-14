@@ -29,6 +29,7 @@
 		center: false,
 		dots: true,
 		smartSpeed:1500,
+		rtl: true,
 		responsive:{
 			0:{
 				items:1,
@@ -57,6 +58,7 @@
 		dots: true,
 		smartSpeed:1500,
 		margin: 20,
+		rtl: true,
 		responsive:{
 			0:{
 				items:1
@@ -82,6 +84,7 @@
 		mouseDrag: true,
 		dots: false,
 		smartSpeed:1500,
+		rtl: true,
 		responsive:{
 			0:{
 				items:1
@@ -109,6 +112,7 @@
 		margin: 20,
 		dots: false,
 		smartSpeed:1500,
+		rtl: true,
 		responsive:{
 			0:{
 				items:1
@@ -201,6 +205,7 @@
 		autoplay: true,
 		smartSpeed:1500,
 		autoplayHoverPause: true,
+		rtl: true,
 	});
 
 	//Slider Text Animation
@@ -278,5 +283,3 @@
 		callback: callbackFunction
 	});
 })(jQuery);
-
-

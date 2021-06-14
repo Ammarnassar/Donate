@@ -28,8 +28,7 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{asset('temp/nivo/assets/css/style.css')}}">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-
+    <!-- Google Arabic & English Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
 
@@ -37,6 +36,7 @@
     <!-- Style CSS RTL (Arabic) -->
     <link rel="stylesheet" href="{{asset('temp/nivo/assets/css/rtl.css')}}">
 @endif
+
 <!-- Title -->
-    <title>Donate App</title>
+    <title>{{config('app.name')}}</title>
 </head>

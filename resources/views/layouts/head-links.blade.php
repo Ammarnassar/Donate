@@ -1,8 +1,8 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Owl Theme Default Min CSS -->
     <link rel="stylesheet" href="{{asset('temp/nivo/assets/css/owl.theme.default.min.css')}}">
     <!-- Owl Carousel Min CSS -->
@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="{{asset('temp/nivo/assets/css/bootstrap.min.css')}}">
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{asset('temp/nivo/assets/css/style.css')}}">
+
+    <link rel="stylesheet" href="{{asset('temp/login/css/style.css')}}">
 
     <!-- Google Arabic & English Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">

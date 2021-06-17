@@ -6,15 +6,6 @@
 <body @if (App::getLocale()== 'ar') style="font-family: 'Tajawal', sans-serif !important;" @else
             style="font-family: 'Open Sans', sans-serif !important;"@endif>
 
-{{--<!-- Start Preloader Area -->--}}
-{{--<div class="preloader">--}}
-{{--    <div class="spinner">--}}
-{{--        <div class="double-bounce1"></div>--}}
-{{--        <div class="double-bounce2"></div>--}}
-{{--    </div>--}}
-{{--</div>--}}
-{{--<!-- End Preloader Area -->--}}
-
 <!-- Start Header Area -->
 <div class="nivo-header-style-one fixed-top">
     <div class="navbar-area">

@@ -36,5 +36,17 @@
     "Your Phone" : "رقم الهاتف",
     "Subject" : "الموضوع",
     "Your Message" : "رسالتك",
-    "Send Message" : "إرسال الرسالة"
+    "Send Message" : "إرسال الرسالة",
+    "Welcome" : "أهلاً بك",
+    "Don't have an account ?" : "ليس لديك حساب ؟",
+    "Register Now" : "سجّل الآن",
+    "Login" : "تسجيل الدخول",
+    "Password" : "كلمة المرور",
+    "Forgot Password ?" : "نسيت كلمة المرور ؟ ",
+    "Already have account ?" : "لديك حساب بالفعل ؟ ",
+    "Register now and be the reason for someone's happiness !" : "سجّل الآن وكن سببًا في سعادة أحدهم !",
+    "Register" : "التسجيل",
+    "Name" : "الاسم",
+    "Password Confirmation" : "تأكيد كلمة المرور",
+    "Back To Home" : "العودة إلى الصفحة الرئيسية"
 }

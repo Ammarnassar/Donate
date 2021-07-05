@@ -80,7 +80,7 @@
 </div>
 <!-- End Header Area -->
 
-<main id="main">
+<main id="main" class="">
     @yield('main')
 </main>
 

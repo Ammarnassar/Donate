@@ -42,6 +42,17 @@
                                 <li class="nav-item">
                                     <a href="{{route('contact')}}" class="nav-link @if(Route::currentRouteName() == 'contact') active @endif">{{__('Contact')}}</a>
                                 </li>
+                                <li class="nav-item d-inline-block d-md-none">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                            <a style="@if ($loop->last) margin-top: 15px; @endif color: #e22b64" class="text-center"  rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                {{ $properties['native'] }}
+                                            </a>
+                                        @endforeach
+                                    </div>
+
+
+                                </li>
                             </ul>
                             <div class="others-option">
                                 <div class="others-options">

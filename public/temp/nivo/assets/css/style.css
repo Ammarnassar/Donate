@@ -1415,7 +1415,7 @@ Active Campaing Area Style
 Help Area Style
 ================================*/
 .help-area {
-  background-image: url(../img/help-bg.jpg);
+  background-image: url(/temp/nivo/assets/img/help-bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

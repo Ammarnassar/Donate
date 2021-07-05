@@ -14,6 +14,7 @@ Route::group([
     Route::view('/contact' , 'contact')->name('contact');
     Route::view('/login' , 'auth.login')->name('login');
     Route::view('/register' , 'auth.register')->name('register');
+    Route::view('/donate' , 'donate')->name('donate');
 
     Route::group(['as' => 'causes.' , 'prefix' => 'causes'] , function (){
         Route::view('/index' , 'causes.index')->name('index');
@@ -26,7 +27,6 @@ Route::group([
 
     Route::group(['as' => 'dashboard.' , 'prefix' => 'dashboard'] , function (){
         Route::view('/index' , 'dashboard.index')->name('index');
-
     });
 
 });

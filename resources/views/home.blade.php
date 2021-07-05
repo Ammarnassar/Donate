@@ -44,67 +44,48 @@
         <div class="container">
             <div class="section-title">
                 <h2>{{__('Help the Poor Through Us')}}</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="single-good-causes">
                         <i class="flaticon-gift"></i>
-                        <h3>Surprised Box</h3>
+                        <h3>{{__('Surprised Box')}}</h3>
                         <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore consectetur amet adipiscing elit.</p>
-                        <a class="read-more" href="causes-details.html">
-                            Read More
-                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-good-causes">
                         <i class="flaticon-customer"></i>
-                        <h3>Helping Hand</h3>
+                        <h3>{{__('Helping Hand')}}</h3>
                         <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore consectetur amet adipiscing elit.</p>
-                        <a class="read-more" href="causes-details.html">
-                            Read More
-                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-good-causes">
                         <i class="flaticon-coin"></i>
-                        <h3>Aid For Children</h3>
-                        <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore consectetur amet adipiscing elit.</p>
-                        <a class="read-more" href="causes-details.html">
-                            Read More
-                        </a>
+                        <h3>{{__('Aid For Children')}}</h3>
+                        <p>{{__('We Dream to Create A Bright Future Of The Underprivileged Children')}}</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-good-causes">
                         <i class="flaticon-family"></i>
-                        <h3>Helping Hand</h3>
+                        <h3>{{__('Spread Love')}}</h3>
                         <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore consectetur amet adipiscing elit.</p>
-                        <a class="read-more" href="causes-details.html">
-                            Read More
-                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-good-causes">
                         <i class="flaticon-harvest"></i>
-                        <h3>Food Camp</h3>
+                        <h3>{{__('Food Camp')}}</h3>
                         <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore consectetur amet adipiscing elit.</p>
-                        <a class="read-more" href="causes-details.html">
-                            Read More
-                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-good-causes">
                         <i class="flaticon-smile"></i>
-                        <h3>Smile Session</h3>
+                        <h3>{{__('Smile Session')}}</h3>
                         <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore consectetur amet adipiscing elit.</p>
-                        <a class="read-more" href="causes-details.html">
-                            Read More
-                        </a>
                     </div>
                 </div>
             </div>
@@ -135,28 +116,27 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-text ptb-100">
-                        <span>About Us</span>
-                        <h2>A Dream in their Mind is Our Mission</h2>
+                        <h2>{{__('A Dream in their Mind is Our Mission')}}</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem Ipsum is simply.</p>
                         <ul>
                             <li>
-                                <i class="flaticon-check-mark"></i>
-                                Become Volunteer
+                                <i class="flaticon-check-mark " style="clear: right"></i>
+                                {{__('Become Volunteer')}}
                             </li>
                             <li>
-                                <i class="flaticon-check-mark"></i>
-                                Quick  Fundraise
+                                <i class="flaticon-check-mark" style="clear: right"></i>
+                                {{__('Quick Fundraise')}}
                             </li>
                             <li>
-                                <i class="flaticon-check-mark"></i>
-                                Give Donation
+                                <i class="flaticon-check-mark" style="clear: right"></i>
+                                {{__('Give Donation')}}
                             </li>
                             <li>
-                                <i class="flaticon-check-mark"></i>
-                                Join Event
+                                <i class="flaticon-check-mark" style="clear: right"></i>
+                                {{__('Join Event')}}
                             </li>
                         </ul>
-                        <a class="default-btn" href="about.html">More Details</a>
+                        <a class="default-btn" href="{{route('about')}}">{{__('More Details')}}</a>
                     </div>
                 </div>
             </div>
@@ -168,8 +148,7 @@
     <section class="active-campaing-area pt-100">
         <div class="container">
             <div class="section-title">
-                <span>Active Campaign</span>
-                <h2>Some Good Causes</h2>
+                <h2>{{__('Some Causes')}}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
             </div>
             <div class="campaing-wrap owl-carousel owl-theme">
@@ -186,10 +165,10 @@
     <section class="help-area">
         <div class="container">
             <div class="help-title">
-                <h2>Some Good Causes</h2>
+                <h2>{{__('Small Actions Lead To Big changes')}}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
-                <a class="default-btn" href="donate.html">Donate Now</a>
-                <a class="default-btn join" href="#">Join Now</a>
+                <a class="default-btn" href="donate.html">{{__('Donate Now')}}</a>
+                <a class="default-btn join" href="#">{{__('Join Now')}}</a>
             </div>
         </div>
     </section>
@@ -206,27 +185,26 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="get-started-title">
-                        <span>Get Started Today</span>
-                        <h2>Our Fundraise Plans</h2>
+                        <h2>{{__('Our Fundraise Plans')}}</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div class="get-started-list">
                         <img src="{{asset('temp/nivo/assets/img/get-started/1.png')}}" alt="Started">
-                        <h3>Education For Children</h3>
+                        <h3>{{__('Education For Children')}}</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
                     </div>
                     <div class="get-started-list">
                         <img src="{{asset('temp/nivo/assets/img/get-started/2.png')}}" alt="Started">
-                        <h3>Home For Homeless People</h3>
+                        <h3>{{__('Home For Homeless People')}}</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
                     </div>
                     <div class="get-started-list">
                         <img src="{{asset('temp/nivo/assets/img/get-started/3.png')}}" alt="Started">
-                        <h3>Free Medical Services</h3>
+                        <h3>{{__('Free Medical Services')}}</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
                     </div>
-                    <a class="default-btn" href="#">
-                        Learn More
+                    <a class="default-btn" href="{{route('about')}}">
+                        {{__('Learn More')}}
                     </a>
                 </div>
             </div>
@@ -240,10 +218,10 @@
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="organaization-text">
-                        <h2>Small Growing charity organaization wants to raise money</h2>
+                        <h2>{{__('Small Growing charity organaization wants to raise money')}}</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis  suspendisse  gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem Ipsum is simple dummy text of the printing and typesetting industry.</p>
                         <a class="default-btn" href="donate.html">
-                            How To Donate
+                            {{__('How To Donate')}}
                         </a>
                     </div>
                 </div>
@@ -261,9 +239,7 @@
     <section class="testimonial-area">
         <div class="container">
             <div class="section-title">
-                <span>Testimonial</span>
-                <h2>Their Thoughts  About Our Work</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+                <h2>{{__('Their Thoughts  About Our Work')}}</h2>
             </div>
             <div class="row">
                 <div class="testimonial-wrap owl-carousel owl-theme">
@@ -298,9 +274,7 @@
     <section class="latest-news-area">
         <div class="container">
             <div class="section-title">
-                <span>Latest News</span>
-                <h2>Some of The Recent Stories</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+                <h2>{{__('Some of The Recent Stories')}}</h2>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6">

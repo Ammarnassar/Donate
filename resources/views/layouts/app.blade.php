@@ -58,7 +58,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="donate.html" class="donate">{{__('Donate Now')}}</a>
+                                <a href="{{route('donate')}}" class="donate">{{__('Donate Now')}}</a>
                             </div>
                         </div>
                     </div>

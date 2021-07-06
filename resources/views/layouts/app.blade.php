@@ -3,9 +3,7 @@
 
 @include('layouts.head-links')
 
-<body @if (App::getLocale()== 'ar') style="font-family: 'Tajawal', sans-serif !important;" @else
-            style="font-family: 'Open Sans', sans-serif !important;"@endif>
-
+<body>
 <!-- Start Header Area -->
 <div class="nivo-header-style-one fixed-top">
     <div class="navbar-area">
@@ -62,7 +60,7 @@
 
                                         <div class="search-overlay search-popup" >
                                             @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                                <a style="@if ($loop->last) margin-top: 15px; @endif color: #e22b64"   rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                <a style="@if ($loop->last) margin-top: 15px; @endif color: #e22b64; "   rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                                                     {{ $properties['native'] }}
                                                 </a>
                                             @endforeach

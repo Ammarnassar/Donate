@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -9,12 +10,17 @@ Route::group([
     'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
 
+//Auth Routes
+    Route::view('/login' , 'auth.login')->name('login');
+    Route::post('/login' , [AuthController::class , 'login']);
+    Route::view('/register' , 'auth.register')->name('register');
+    Route::post('/register' , [AuthController::class , 'register']);
+
+
     Route::view('/' , 'home')->name('home');
     Route::view('/about' , 'about')->name('about');
     Route::view('/contact' , 'contact')->name('contact');
-    Route::view('/login' , 'auth.login')->name('login');
-    Route::view('/register' , 'auth.register')->name('register');
-    Route::view('/donate' , 'donate')->name('donate');
+
 
     Route::group(['as' => 'causes.' , 'prefix' => 'causes'] , function (){
         Route::view('/index' , 'causes.index')->name('index');
@@ -29,4 +35,9 @@ Route::group([
         Route::view('/index' , 'dashboard.index')->name('index');
     });
 
+    Route::group(['middleware' => 'auth'] , function () {
+        Route::view('/donate' , 'donate')->name('donate');
+        Route::get('/logout' , [AuthController::class , 'logout'])->name('logout');
+
+    });
 });

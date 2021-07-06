@@ -8144,7 +8144,7 @@ h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.5;
   font-weight: 400;
-  color: #000; }
+  color: #f35588; }
 
 .bg-primary {
   background: #f35588 !important; }
@@ -8205,11 +8205,10 @@ h1, h2, h3, h4, h5,
 .form-group {
   position: relative; }
   .form-group .label {
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
-    letter-spacing: 1px;
     color: #000;
-    font-weight: 700; }
+  }
   .form-group a {
     color: gray; }
 

@@ -21,6 +21,14 @@ style="font-family: 'Open Sans', sans-serif !important;"@endif>
             <i class="fa @if (App::getLocale()== 'ar') fa-arrow-left @else fa-arrow-right @endif " ></i>
         </a>
     </div>
+
+    <div class="d-flex align-items-center justify-content-center mt-4">
+        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+            <a style=" color: #000 " class="mx-2"  rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                {{ $properties['native'] }}
+            </a>
+        @endforeach
+    </div>
 </section>
 
 

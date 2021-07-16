@@ -69,7 +69,7 @@
                             </div>
                             @auth
                             <div class="mx-4 d-none d-md-inline-block dropdown">
-                                <span> {{substr(auth()->user()->name , 0 , 7)}} </span>
+                                <span type="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false"> {{substr(auth()->user()->name , 0 , 7)}} </span>
                                 <img src="{{asset('/temp/nivo/assets/img/user_avatar.png')}}" class="rounded-circle border border-3" style="width: 50px" alt="" type="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
                                 <ul class="dropdown-menu py-2 text-center" aria-labelledby="dropdownMenu">
                                     <li><a class="dropdown-item" style="font-size: 13px" href="#">

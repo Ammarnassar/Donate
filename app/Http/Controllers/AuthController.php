@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -17,7 +18,7 @@ class AuthController extends Controller
             'password' => 'required',
         ]);
 
-        if (! auth()->attempt($data)) {
+        if (! auth()->attempt($data , true)) {
 
             $errors = new MessageBag(['password' => 'Incorrect Password .']);
 
@@ -25,7 +26,12 @@ class AuthController extends Controller
 
         }
 
-        return redirect()->route('home');
+        if (auth()->user()->role) {
+            return redirect()->route('admin.index');
+        } else {
+            return redirect()->route('home');
+        }
+
     }
 
     public function register(Request $request)
@@ -40,6 +46,7 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => 0
         ]);
 
         auth()->attempt($request->only(['email' , 'password']));

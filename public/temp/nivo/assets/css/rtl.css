@@ -49,6 +49,7 @@ body {
     right: 0;
     left: unset;
 }
+
 .nivo-nav-one .main-nav nav .navbar-nav .nav-item .dropdown-menu li a{
     text-align: right;
 }

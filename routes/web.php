@@ -16,11 +16,10 @@ Route::group([
     Route::view('/register' , 'auth.register')->name('register');
     Route::post('/register' , [AuthController::class , 'register']);
 
-
+//Public Routes
     Route::view('/' , 'home')->name('home');
     Route::view('/about' , 'about')->name('about');
     Route::view('/contact' , 'contact')->name('contact');
-
 
     Route::group(['as' => 'causes.' , 'prefix' => 'causes'] , function (){
         Route::view('/index' , 'causes.index')->name('index');
@@ -31,13 +30,17 @@ Route::group([
         Route::view('/show' , 'blog.show')->name('show');
     });
 
-    Route::group(['as' => 'dashboard.' , 'prefix' => 'dashboard'] , function (){
-        Route::view('/index' , 'dashboard.index')->name('index');
-    });
+//Protected Routes
 
     Route::group(['middleware' => 'auth'] , function () {
         Route::view('/donate' , 'donate')->name('donate');
         Route::get('/logout' , [AuthController::class , 'logout'])->name('logout');
 
+    });
+
+
+//Admin Routes
+    Route::group(['as' => 'admin.' , 'prefix' => 'admin' , 'middleware' => ['auth' , 'admin']] , function (){
+        Route::view('/index' , 'admin.index')->name('index');
     });
 });

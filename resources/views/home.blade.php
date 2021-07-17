@@ -50,42 +50,36 @@
                     <div class="single-good-causes">
                         <i class="flaticon-gift"></i>
                         <h3>{{__('Surprised Box')}}</h3>
-                        <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore consectetur amet adipiscing elit.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-good-causes">
                         <i class="flaticon-customer"></i>
                         <h3>{{__('Helping Hand')}}</h3>
-                        <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore consectetur amet adipiscing elit.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-good-causes">
                         <i class="flaticon-coin"></i>
                         <h3>{{__('Aid For Children')}}</h3>
-                        <p>{{__('We Dream to Create A Bright Future Of The Underprivileged Children')}}</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-good-causes">
                         <i class="flaticon-family"></i>
                         <h3>{{__('Spread Love')}}</h3>
-                        <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore consectetur amet adipiscing elit.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-good-causes">
                         <i class="flaticon-harvest"></i>
                         <h3>{{__('Food Camp')}}</h3>
-                        <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore consectetur amet adipiscing elit.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-good-causes">
                         <i class="flaticon-smile"></i>
                         <h3>{{__('Smile Session')}}</h3>
-                        <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore consectetur amet adipiscing elit.</p>
                     </div>
                 </div>
             </div>

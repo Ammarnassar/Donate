@@ -23,6 +23,8 @@
 <!-- Ajaxchimp Min JS -->
 <script src="{{asset('temp/nivo/assets/js/ajaxchimp.min.js')}}"></script>
 
+@livewireScripts
+
 
 @if (\Illuminate\Support\Facades\App::getLocale() == 'ar')
     <!-- Custom JS -->

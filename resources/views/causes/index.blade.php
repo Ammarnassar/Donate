@@ -12,10 +12,15 @@
             </div>
 
             <div class="row">
+                @forelse($causes as $case)
                 <div class="col-12 col-md-4">
-                    <x-case-card id="1" title="Ammar" description="Aldwayma" goal="5000" raised="2000" image="temp/nivo/assets/img/campaing/2.jpg" />
+                    <x-case-card id="{{$case->id}}" title="{{$case->title}}" description="{{$case->details}}" goal="{{$case->goal}}" raised="{{$case->raised}}" image="temp/nivo/assets/img/campaing/2.jpg" />
                 </div>
+                @empty
+                    <div class="text-primary text-center">No Causes !</div>
+                @endforelse
             </div>
+            <div class="text-center">{{ $causes->links() }}</div>
         </div>
         <div class=" shape shape-1">
             <img src="{{asset('temp/nivo/assets/img/shape/1.png')}}" alt="Shape">

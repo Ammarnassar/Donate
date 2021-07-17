@@ -39,7 +39,7 @@ return [
     'digits_between' => 'The :attribute must be between :min and :max digits.',
     'dimensions' => 'The :attribute has invalid image dimensions.',
     'distinct' => 'The :attribute field has a duplicate value.',
-    'email' => 'The :attribute must be a valid email address.',
+    'email' => ' يجب ادخال عنوان بريد الكتروني صالح',
     'ends_with' => 'The :attribute must end with one of the following: :values.',
     'exists' => ' :attribute غير موجود',
     'file' => 'The :attribute must be a file.',
@@ -93,7 +93,7 @@ return [
     'multiple_of' => 'The :attribute must be a multiple of :value.',
     'not_in' => 'The selected :attribute is invalid.',
     'not_regex' => 'The :attribute format is invalid.',
-    'numeric' => 'The :attribute must be a number.',
+    'numeric' => 'يجب أن يكون :attribute مكوّن من أرقام',
     'password' => 'The password is incorrect.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
@@ -154,6 +154,9 @@ return [
         'email' => 'البريد الإلكتروني',
         'password' => 'كلمة المرور',
         'name' => 'الاسم',
+        'phone' => 'رقم الهاتف',
+        'firstName' => 'الاسم الأول',
+        'lastName' => 'الاسم الأخير',
+        'donateType' => 'نوع التبرع',
     ],
-
 ];

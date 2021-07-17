@@ -34,27 +34,6 @@ class AuthController extends Controller
 
     }
 
-    public function register(Request $request)
-    {
-        $data = $request->validate([
-            'email' => 'required|email|unique:users',
-            'name' => 'required|max:25',
-            'password' => 'required|min:8|confirmed'
-        ]);
-
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'role' => 0
-        ]);
-
-        auth()->attempt($request->only(['email' , 'password']));
-
-        return redirect()->route('home');
-
-    }
-
     public function logout()
     {
         Auth::logout();

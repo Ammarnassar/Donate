@@ -1349,7 +1349,6 @@ Active Campaing Area Style
   -webkit-animation: animate-positive 2s;
   animation: animate-positive 2s;
   background-color: #e22b64;
-  width: 50%;
 }
 
 .single-campaing .campaing-text .progress .progress-bar:after {
@@ -3533,7 +3532,6 @@ Coming Soon Area Style
   text-align: center;
   position: relative;
   z-index: 1;
-  background-color: #ffffff;
 }
 
 .error-area::before {

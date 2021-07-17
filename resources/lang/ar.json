@@ -75,5 +75,15 @@
     "Their Thoughts  About Our Work" : "أفكارهم حول عملنا",
     "Some of The Recent Stories" : "بعض القصص الحديثة",
     "Profile" : "الملف الشخصي",
-    "Logout" : "تسجيل الخروج"
+    "Logout" : "تسجيل الخروج",
+    "Personal Information" : "المعلومات الشخصية",
+    "First Name" : "الاسم الأول",
+    "Last Name" : "الاسم الأخير",
+    "Donation Type" : "نوع التبرّع",
+    "In-Kind" : "عيني",
+    "Cash" : "نقدي",
+    "Donation Clause" : "بند التبرّع",
+    "Donation Information" : "معلومات التبرّع",
+    "Oops! Page Not Found" : "للأسف ! الصفحة غير موجودة",
+    "The page you were looking for could not be found." : "الصفحة التي كنت تبحث عنها لا يُمكن العثور عليها ."
 }

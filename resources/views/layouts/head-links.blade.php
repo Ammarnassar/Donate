@@ -41,4 +41,7 @@
 
 <!-- Title -->
     <title>{{config('app.name')}}</title>
+
+    @livewireStyles
+
 </head>

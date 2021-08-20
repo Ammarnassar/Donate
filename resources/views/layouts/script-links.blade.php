@@ -25,6 +25,11 @@
 
 @livewireScripts
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+</script>
+
+<x-livewire-alert::scripts />
+
 
 @if (\Illuminate\Support\Facades\App::getLocale() == 'ar')
     <!-- Custom JS -->

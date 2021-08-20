@@ -16,4 +16,16 @@ class Request extends Model
         return $this->belongsToMany(RequestCategory::class , 'request_categories');
     }
 
+    public function image()
+    {
+        return $this->morphOne(Image::class , 'imageable')->withDefault([
+            'url' => ''
+        ]);
+    }
+
+    public function donations()
+    {
+        return $this->hasMany(Donation::class);
+    }
+
 }

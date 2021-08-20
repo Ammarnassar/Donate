@@ -5,16 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Donation extends Model
 {
     use HasFactory;
 
     protected $guarded = ['id'];
 
-    public function image()
+    public function request()
     {
-        return $this->morphOne(Image::class , 'imageable')->withDefault([
-            'url' => ''
-        ]);
+        return $this->belongsTo(Request::class );
     }
 }

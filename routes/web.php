@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\RequestController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
@@ -17,16 +19,18 @@ Route::group([
 
 //Public Routes
     Route::view('/' , 'home')->name('home');
-    Route::view('/about' , 'about')->name('about');
-    Route::view('/contact' , 'contact')->name('contact');
+    Route::view('about' , 'about')->name('about');
+    Route::view('contact' , 'contact')->name('contact');
+    Route::view('donate' , 'donate')->name('donate');
 
-    Route::group(['as' => 'causes.' , 'prefix' => 'causes'] , function (){
-        Route::get('/index' , [RequestController::class , 'allCauses'])->name('index');
+    Route::group(['as' => 'case.' , 'prefix' => 'case'] , function (){
+        Route::get('all' , [RequestController::class , 'allCauses'])->name('all');
+        Route::get('show/{case}' , [RequestController::class , 'show'])->name('show');
     });
 
     Route::group(['as' => 'blog.' , 'prefix' => 'blog'] , function (){
-        Route::view('/index' , 'blog.index')->name('index');
-        Route::view('/show' , 'blog.show')->name('show');
+        Route::get('' , [PostController::class , 'index'])->name('index');
+        Route::get('{post:title}' , [PostController::class , 'show'])->name('show');
     });
 
 //Protected Routes
@@ -35,10 +39,12 @@ Route::group([
         Route::get('/logout' , [AuthController::class , 'logout'])->name('logout');
     });
 
-    Route::view('/donate' , 'donate')->name('donate');
-
 //Admin Routes
     Route::group(['as' => 'admin.' , 'prefix' => 'admin' , 'middleware' => ['auth' , 'admin']] , function (){
-        Route::view('/' , 'admin.index')->name('index');
+        Route::get('/' , [AdminController::class , 'index'])->name('index');
+        Route::resource('/post' , PostController::class);
+        Route::resource('/request' , RequestController::class);
     });
 });
+
+

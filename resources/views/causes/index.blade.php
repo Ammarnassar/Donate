@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('main')
-    @include('layouts.page-title' , ['pageRoute' => 'causes.index' , 'currentPageName' => 'Causes' , 'previousPageName' => '' , 'previousPageRoute' => '' , 'background' => '/temp/nivo/assets/img/page-banner/5.jpg'])
+    @include('layouts.page-title' , ['pageRoute' => 'case.all' , 'currentPageName' => 'Causes' , 'previousPageName' => '' , 'previousPageRoute' => '' , 'background' => '/temp/nivo/assets/img/page-banner/5.jpg'])
 
     <!-- Start Active Campaing Area -->
-    <section class="active-campaing-area two  ">
+    <section class="active-campaing-area two">
         <div class="container">
             <div class="section-title">
                 <h2>{{__('Our Causes')}}</h2>
@@ -14,12 +14,13 @@
             <div class="row">
                 @forelse($causes as $case)
                 <div class="col-12 col-md-4">
-                    <x-case-card id="{{$case->id}}" title="{{$case->title}}" description="{{$case->details}}" goal="{{$case->goal}}" raised="{{$case->raised}}" image="temp/nivo/assets/img/campaing/2.jpg" />
+                    <x-case-card :case="$case" image="temp/nivo/assets/img/campaing/2.jpg" />
                 </div>
                 @empty
                     <div class="text-primary text-center">No Causes !</div>
                 @endforelse
             </div>
+
             <div class="text-center">{{ $causes->links() }}</div>
         </div>
         <div class=" shape shape-1">

@@ -32,7 +32,7 @@
                                     <a href="{{route('about')}}" class="nav-link @if(Route::currentRouteName() == 'about') active @endif">{{__('About')}}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('causes.index')}}" class="nav-link @if(Route::currentRouteName() == 'causes.index') active @endif">{{__('Causes')}}</a>
+                                    <a href="{{route('case.all')}}" class="nav-link @if(Route::currentRouteName() == 'causes.index') active @endif">{{__('Causes')}}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{route('blog.index')}}" class="nav-link @if(Route::currentRouteName() == 'blog.index') active @endif">{{__('Blog')}}</a>

@@ -45,7 +45,7 @@
                     <h3>{{__('Pages')}}</h3>
                     <ul>
                         <li>
-                            <a href="{{route('causes.index')}}">{{__('Causes')}}</a>
+                            <a href="{{route('case.all')}}">{{__('Causes')}}</a>
                         </li>
                         <li>
                             <a href="{{route('blog.index')}}">{{__('Blog')}}</a>

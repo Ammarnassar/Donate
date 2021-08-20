@@ -146,7 +146,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
             </div>
             <div class="campaing-wrap owl-carousel owl-theme">
-                <x-case-card id="1" title="Ammar" description="Aldwayma" goal="2000" raised="500" image="temp/nivo/assets/img/campaing/2.jpg"/>
+                <x-case-card :case="\App\Models\Request::first()" image="temp/nivo/assets/img/campaing/2.jpg"/>
             </div>
         </div>
         <div class=" shape shape-1">

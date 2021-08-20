@@ -29,7 +29,7 @@
                         <i class="fa fa-chevron-right mx-2"></i>
                     @endif
                 <li>
-                    <a href="{{route($pageRoute)}}" @if(Route::currentRouteName() == $pageRoute) style="color: #fd3c65" @endif>
+                    <a href="{{$pageRoute}}" @if(Route::currentRouteName() == $pageRoute) style="color: #fd3c65" @endif>
                         {{__($currentPageName)}}
                     </a>
                 </li>

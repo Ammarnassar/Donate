@@ -1,22 +1,10 @@
 @extends('layouts.dashboard')
 
-@section('main')
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <div class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1 class="m-0">Dashboard</h1>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-        </div>
-        <!-- /.content-header -->
+@section('title' ,'Dashboard')
 
-        <!-- Main content -->
-        <section class="content ">
+@section('main')
+
+    <section class="content ">
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
@@ -24,12 +12,12 @@
                         <!-- small box -->
                         <div class="small-box bg-info">
                             <div class="inner">
-                                <h3>150</h3>
+                                <h3>{{$causesCount}}</h3>
 
-                                <p>New Orders</p>
+                                <p>Causes</p>
                             </div>
                             <div class="icon">
-                                <i class="ion ion-bag"></i>
+                                <i class="fas fa-list"></i>
                             </div>
                             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
@@ -84,7 +72,5 @@
                 <!-- /.row -->
             </div><!-- /.container-fluid -->
         </section>
-        <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
+
 @endsection

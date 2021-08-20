@@ -98,7 +98,7 @@ return [
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
     'required' => 'يرجى إدخال :attribute',
-    'required_if' => 'The :attribute field is required when :other is :value.',
+    'required_if' => 'يرجى إدخال :attribute',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
     'required_with_all' => 'The :attribute field is required when :values are present.',
@@ -158,5 +158,7 @@ return [
         'firstName' => 'الاسم الأول',
         'lastName' => 'الاسم الأخير',
         'donateType' => 'نوع التبرع',
+        'amount' => 'المبلغ',
+        'kindDetails' => 'تفاصبل التبرّع العيني',
     ],
 ];

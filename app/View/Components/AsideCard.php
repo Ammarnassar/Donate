@@ -4,20 +4,16 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class CaseCard extends Component
+class AsideCard extends Component
 {
-    public $case;
-    public $image;
-
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct( $case , $image)
+    public function __construct()
     {
-        $this->case = $case;
-        $this->image = $image;
+        //
     }
 
     /**
@@ -27,6 +23,6 @@ class CaseCard extends Component
      */
     public function render()
     {
-        return view('components.case-card');
+        return view('components.aside-card');
     }
 }

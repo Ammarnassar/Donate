@@ -22,10 +22,9 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-text">
-                        <span>About Us</span>
-                        <h2>A Dream in their Mind is Our Mission</h2>
-                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy.</p>
-                        <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi ullam quibusdam, maiores a explicabo magnam dolor? Architecto velit, assumenda dolore consectetur adipisicing elit explicabo magnam dolor? Architecto velit, assumenda dolore magnam dolor? Architecto Lorem ipsum, dolor sit amet consectetur Architecto</p>
+                        <span>{{__('About Us')}}</span>
+                        <h2>{{__('A Dream in their Mind is Our Mission')}}</h2>
+                        <p class="mb-3"> {{__('Our mission is to provide this platform for everyone who needs it to publish their status for free and without revealing their identity if they want, so that this platform enables them to reach the largest number of donors, contributors and those who love charity and cooperation.')}}</p>
                     </div>
                 </div>
             </div>
@@ -37,37 +36,29 @@
     <section class="help-area two">
         <div class="container">
             <div class="help-title">
-                <h2>Some Good Causes</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
-                <a class="default-btn" href="#">Donate Now</a>
-                <a class="default-btn join" href="#">Join Now</a>
+                <h2>{{__('Some Of Our Numbers')}}</h2>
+                <a class="default-btn" href="#">{{__('Donate Now')}}</a>
             </div>
         </div>
         <div class="container">
             <div class="counter-wrap">
                 <div class="row">
-                    <div class="col-lg-3 col-sm-6 col-md-3">
-                        <div class="single-conuter">
-                            <span class="odometer" data-count="2500">00</span>
-                            <p>Since</p>
+                    <div class="col-lg-4 col-sm-12 col-md-4">
+                        <div class="single-conuter" dir="ltr">
+                            <span class="odometer" data-count="{{$donationsCount}}">{{$donationsCount}}</span>
+                            <p>{{__('Donations')}}</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6 col-md-3">
-                        <div class="single-conuter">
-                            <span class="odometer" data-count="2005">00</span>
-                            <p>Projects</p>
+                    <div class="col-lg-4 col-sm-12 col-md-4">
+                        <div class="single-conuter" dir="ltr">
+                            <span class="odometer" data-count="{{$causesCount}}">{{$causesCount}}</span>
+                            <p>{{__('Cases')}}</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6 col-md-3">
-                        <div class="single-conuter">
-                            <span class="odometer" data-count="3004">00</span>
-                            <p>Volunteers</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-md-3">
-                        <div class="single-conuter">
-                            <span class="odometer" data-count="2004">00</span>
-                            <p>Projects</p>
+                    <div class="col-lg-4 col-sm-12 col-md-4">
+                        <div class="single-conuter" dir="ltr">
+                            <span class="odometer"  data-count="50">50</span>
+                            <p>{{__('Help')}}</p>
                         </div>
                     </div>
                 </div>
@@ -77,7 +68,7 @@
     <!-- End Help Area -->
 
     <!-- Start Get Started Today Area -->
-    <section class="get-started-today-area pt-100">
+    <section class="get-started-today-area ptb-100">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -87,28 +78,20 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="get-started-title">
-                        <span>Get Started Today</span>
-                        <h2>Our Fundraise Plans</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h2>{{__('Our Fundraise Plans')}}</h2>
                     </div>
-                    <div class="get-started-list">
+                    <div class="get-started-list ">
                         <img src="{{asset('temp/nivo/assets/img/get-started/1.png')}}" alt="Started">
-                        <h3>Education For Children</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                        <h3 class="text-dark">{{__('Education For Children')}}</h3>
                     </div>
                     <div class="get-started-list">
                         <img src="{{asset('temp/nivo/assets/img/get-started/2.png')}}" alt="Started">
-                        <h3>Home For Homeless People</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                        <h3 class="text-dark">{{__('Home For Homeless People')}}</h3>
                     </div>
                     <div class="get-started-list">
                         <img src="{{asset('temp/nivo/assets/img/get-started/3.png')}}" alt="Started">
-                        <h3>Free Medical Services</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                        <h3 class="text-dark">{{__('Free Medical Services')}}</h3>
                     </div>
-                    <a class="default-btn" href="#">
-                        Learn More
-                    </a>
                 </div>
             </div>
         </div>
@@ -121,16 +104,12 @@
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="organaization-text">
-                        <h2>Small Growing charity organaization wants to raise money</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis  suspendisse  gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem Ipsum is simple dummy text of the printing and typesetting industry.</p>
-                        <a class="default-btn" href="#">
-                            How Donate
-                        </a>
+                        <h2>{{__('Small Growing charity organaization wants to raise money')}}</h2>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="organaization">
-                        <img src="{{asset('temp/nivo/assets/img/organaization-2.jpg')}}" alt="Organaization">
+                        <img src="{{asset('temp/nivo/assets/img/organaization.png')}}" alt="Organaization">
                     </div>
                 </div>
             </div>
@@ -142,17 +121,15 @@
     <section class="our-team-area pb-70">
         <div class="container">
             <div class="section-title">
-                <span>Team</span>
-                <h2>Our Volunteers</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+                <h2>{{__('Our Volunteers')}}</h2>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="single-team">
                         <img src="{{asset('temp/nivo/assets/img/team/1.jpg')}}" alt="Team">
                         <div class="team-text">
-                            <h3>Jeniya Jemmy</h3>
-                            <p>Reporter</p>
+                            <h3>Hebah Al-Jamal</h3>
+                            <p>Manager</p>
                             <ul>
                                 <li>
                                     <a href="#">
@@ -177,34 +154,8 @@
                     <div class="single-team">
                         <img src="{{asset('temp/nivo/assets/img/team/2.jpg')}}" alt="Team">
                         <div class="team-text">
-                            <h3>Debit Denish</h3>
-                            <p>Photographer</p>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-linkedin"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 offset-sm-3 offset-lg-0">
-                    <div class="single-team">
-                        <img src="{{asset('temp/nivo/assets/img/team/3.jpg')}}" alt="Team">
-                        <div class="team-text">
-                            <h3>Alen Jems</h3>
-                            <p>Engineer</p>
+                            <h3>Huda Al-Jamal</h3>
+                            <p>Manager</p>
                             <ul>
                                 <li>
                                     <a href="#">

@@ -2563,7 +2563,7 @@
 
   function pageScrollX() {
     // Work around https://bugs.chromium.org/p/chromium/issues/detail?id=489206
-    // which causes page_Offset and bounding client rects to use
+    // which cases page_Offset and bounding client rects to use
     // different reference viewports and invalidate our calculations.
     if (chrome && android) { return -(document.body.getBoundingClientRect().left - parseInt(getComputedStyle(document.body).marginLeft)) }
     return window.pageXOffset || (document.documentElement || document.body).scrollLeft
@@ -4504,7 +4504,7 @@
         { updateScrollTop(cm, Math.max(0, scroll.scrollTop + dy * wheelPixelsPerUnit)); }
       setScrollLeft(cm, Math.max(0, scroll.scrollLeft + dx * wheelPixelsPerUnit));
       // Only prevent default scrolling if vertical scrolling is
-      // actually possible. Otherwise, it causes vertical scroll
+      // actually possible. Otherwise, it cases vertical scroll
       // jitter on OSX trackpads when deltaX is small and deltaY
       // is large (issue #3579)
       if (!dy || (dy && canScrollY))

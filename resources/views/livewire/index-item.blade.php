@@ -4,13 +4,16 @@
             <div class="w-75">
                 <input type="text" class="form-control" placeholder="{{__('Search')}}" wire:model="search">
             </div>
+
             <div class="w-25 @if(App::getLocale() == 'ar') text-left @else text-right @endif">
-                <a href="{{route('admin.'.strtolower(Str::singular($name)).'.create')}}" class=" btn btn-primary">
-                    {{__('Add New').' '.__(Str::singular($name))}}
+                @if(strtolower($name) != 'donations')
+                    @if(strtolower($name) == 'users') @php $name = 'Admin' @endphp @endif
+                    <a href="{{route('admin.'.strtolower(Str::singular($name)).'.create')}}" class=" btn btn-primary">
+                        {{__('Add New').' '.__(Str::singular($name))}}
 
-                    <i class="fas fa-plus-circle text-white mx-1"></i>
-                </a>
-
+                        <i class="fas fa-plus-circle text-white mx-1"></i>
+                    </a>
+                @endif
             </div>
         </div>
         <!-- /.card-header -->
@@ -29,7 +32,7 @@
 
                 @foreach($model as $key => $row)
                     <tr>
-                        <td>{{$row->id}}</td>
+                        <td>{{$key+1}}</td>
                         @for($i = 0 ; $i <= count($columns)-1 ; $i++)
                             @php
                                 $col = strtolower($columns[$i]);
@@ -37,35 +40,18 @@
                             <td>{{$row->$col}}</td>
                         @endfor
                         <td class="d-flex align-items-center justify-content-center">
-                            <a class="btn btn-link bg-success"  data-toggle="modal" data-target="#editModal-{{$row->id}}">
+                            <a class="btn btn-link bg-success" data-toggle="modal"
+                               data-target="#editModal-{{$row->id}}">
                                 <i class="fas fa-edit text-white"></i>
                             </a>
                             <span class="mx-2"></span>
-                            <a class="btn btn-link bg-danger" data-toggle="modal" data-target="#deleteModal-{{$row->id}}">
+                            <a class="btn btn-link bg-danger" wire:click="confirmedDelete({{$row->id}})">
                                 <i class="far fa-trash-alt text-white"></i>
                             </a>
 
-                            <div class="modal fade deleteModal" id="deleteModal-{{$row->id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                 aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content pt-5">
-                                        <div class="modal-body text-center ">
-                                            <h4>Are You Sure to delete this ?</h4>
-                                        </div>
-                                        <div class="modal-footer d-flex align-items-center justify-content-center">
-                                            <button type="button" class="btn btn-secondary mx-2" data-dismiss="modal">
-                                                Close
-                                            </button>
-                                            <button wire:click="delete({{$row->id}})" type="button"
-                                                    class="btn btn-danger mx-2">Delete
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @if(strtolower($name) == 'posts')
-                            <livewire:post.edit-post :row="$row" :key="$row->id"/>
-                            @endif
+                            {{--                            @if(strtolower($name) == 'posts')--}}
+                            {{--                            <livewire:post.edit-post :row="$row" :key="$row->id"/>--}}
+                            {{--                            @endif--}}
                         </td>
                     </tr>
                 @endforeach

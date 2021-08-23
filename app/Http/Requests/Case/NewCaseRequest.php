@@ -30,6 +30,7 @@ class NewCaseRequest extends FormRequest
            'status' => 'required',
            'goal' => 'required|numeric',
            'raised' => 'required|numeric',
+           'category_id' => 'required',
         ];
     }
 }

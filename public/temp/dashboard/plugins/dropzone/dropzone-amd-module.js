@@ -816,7 +816,7 @@ var V8_VERSION = __webpack_require__(7392);
 var SPECIES = wellKnownSymbol('species');
 
 module.exports = function (METHOD_NAME) {
-  // We can't use this feature detection in V8 since it causes
+  // We can't use this feature detection in V8 since it cases
   // deoptimization and serious performance degradation
   // https://github.com/zloirock/core-js/issues/677
   return V8_VERSION >= 51 || !fails(function () {
@@ -1512,7 +1512,7 @@ module.exports = function (KEY, length, exec, sham) {
     var re = /a/;
 
     if (KEY === 'split') {
-      // We can't use real regex here since it causes deoptimization
+      // We can't use real regex here since it cases deoptimization
       // and serious performance degradation in V8
       // https://github.com/zloirock/core-js/issues/306
       re = {};
@@ -2862,14 +2862,14 @@ module.exports = function () {
 
 var fails = __webpack_require__(7293);
 
-// babel-minify transpiles RegExp('a', 'y') -> /a/y and it causes SyntaxError,
+// babel-minify transpiles RegExp('a', 'y') -> /a/y and it cases SyntaxError,
 // so we use an intermediate function.
 function RE(s, f) {
   return RegExp(s, f);
 }
 
 exports.UNSUPPORTED_Y = fails(function () {
-  // babel-minify transpiles RegExp('a', 'y') -> /a/y and it causes SyntaxError
+  // babel-minify transpiles RegExp('a', 'y') -> /a/y and it cases SyntaxError
   var re = RE('a', 'y');
   re.lastIndex = 2;
   return re.exec('abcd') != null;
@@ -3881,7 +3881,7 @@ var IS_CONCAT_SPREADABLE = wellKnownSymbol('isConcatSpreadable');
 var MAX_SAFE_INTEGER = 0x1FFFFFFFFFFFFF;
 var MAXIMUM_ALLOWED_INDEX_EXCEEDED = 'Maximum allowed index exceeded';
 
-// We can't use this feature detection in V8 since it causes
+// We can't use this feature detection in V8 since it cases
 // deoptimization and serious performance degradation
 // https://github.com/zloirock/core-js/issues/679
 var IS_CONCAT_SPREADABLE_SUPPORT = V8_VERSION >= 51 || !fails(function () {
@@ -4485,7 +4485,7 @@ fixRegExpWellKnownSymbolLogic('replace', 2, function (REPLACE, nativeReplace, ma
         //   captures = result.slice(1).map(maybeToString)
         // but for some reason `nativeSlice.call(result, 1, result.length)` (called in
         // the slice polyfill when slicing native arrays) "doesn't work" in safari 9 and
-        // causes a crash (https://pastebin.com/N21QzeQA) when trying to debug it.
+        // cases a crash (https://pastebin.com/N21QzeQA) when trying to debug it.
         for (var j = 1; j < result.length; j++) captures.push(maybeToString(result[j]));
         var namedCaptures = result.groups;
         if (functionalReplace) {
@@ -4528,7 +4528,7 @@ var arrayPush = [].push;
 var min = Math.min;
 var MAX_UINT32 = 0xFFFFFFFF;
 
-// babel-minify transpiles RegExp('x', 'y') -> /x/y and it causes SyntaxError
+// babel-minify transpiles RegExp('x', 'y') -> /x/y and it cases SyntaxError
 var SUPPORTS_Y = !fails(function () { return !RegExp(MAX_UINT32, 'y'); });
 
 // @@split logic
@@ -6688,7 +6688,7 @@ $({ global: true, forced: !USE_NATIVE_URL, sham: !DESCRIPTORS }, {
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -6701,14 +6701,14 @@ $({ global: true, forced: !USE_NATIVE_URL, sham: !DESCRIPTORS }, {
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	!function() {
@@ -6721,7 +6721,7 @@ $({ global: true, forced: !USE_NATIVE_URL, sham: !DESCRIPTORS }, {
 /******/ 			}
 /******/ 		};
 /******/ 	}();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/global */
 /******/ 	!function() {
 /******/ 		__webpack_require__.g = (function() {
@@ -6733,12 +6733,12 @@ $({ global: true, forced: !USE_NATIVE_URL, sham: !DESCRIPTORS }, {
 /******/ 			}
 /******/ 		})();
 /******/ 	}();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	!function() {
 /******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
 /******/ 	}();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	!function() {
 /******/ 		// define __esModule on exports
@@ -6749,7 +6749,7 @@ $({ global: true, forced: !USE_NATIVE_URL, sham: !DESCRIPTORS }, {
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	}();
-/******/ 	
+/******/
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.

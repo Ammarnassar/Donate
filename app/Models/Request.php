@@ -4,26 +4,29 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 class Request extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $guarded = ['id'];
 
-    public function catagory()
+    public function category(): BelongsTo
     {
-        return $this->belongsToMany(RequestCategory::class , 'request_categories');
+        return $this->belongsTo(Category::class);
     }
 
-    public function image()
+    public function image() : MorphOne
     {
         return $this->morphOne(Image::class , 'imageable')->withDefault([
             'url' => ''
         ]);
     }
 
-    public function donations()
+    public function donations() : HasMany
     {
         return $this->hasMany(Donation::class);
     }

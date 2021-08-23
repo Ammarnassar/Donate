@@ -5,7 +5,8 @@
             <div class="col-lg-4 col-sm-6 col-md-6">
                 <div class="single-widget">
                     <a href="index.html">
-                        <img src="{{asset('temp/nivo/assets/img/white-logo.png')}}" alt="">
+                        <img src="{{asset('temp/nivo/assets/img/favicon.png')}}" alt="">
+                        <span class="text-white h4">{{__('Donate To Care')}}</span>
                     </a>
                     <p>{{__('Donate is a platform for collect money !')}}</p>
                     <ul class="social-icon">
@@ -31,12 +32,11 @@
                 <div class="single-widget">
                     <h3>{{__('Case Categories')}}</h3>
                     <ul>
+                        @foreach($categories as $category)
                         <li>
-                            <a href="#">{{__('Medical')}}</a>
+                            <a href="#">{{$category->title}}</a>
                         </li>
-                        <li>
-                            <a href="#">{{__('Education')}}</a>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                     <h3>{{__('Pages')}}</h3>
                     <ul>
                         <li>
-                            <a href="{{route('case.all')}}">{{__('Causes')}}</a>
+                            <a href="{{route('case.all')}}">{{__('Cases')}}</a>
                         </li>
                         <li>
                             <a href="{{route('blog.index')}}">{{__('Blog')}}</a>
@@ -73,7 +73,7 @@
                         </li>
                         <li>
                             <i class="fa fa-phone"></i>
-                            <a href="tel:+962789611469">+962789611469</a>
+                            <a href="tel:+962789611469">+962788838370</a>
                         </li>
                     </ul>
                 </div>
@@ -90,7 +90,7 @@
             <div class="col-lg-6 col-md-6">
                 <div>
                     <p>
-                        {{__('Copyright')}} <i class="fa fa-copyright"></i> 2021 Donate .
+                        {{__('Copyright')}} <i class="fa fa-copyright"></i> 2021 Donate App .
                     </p>
                 </div>
             </div>

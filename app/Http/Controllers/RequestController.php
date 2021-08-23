@@ -4,37 +4,41 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\Case\NewCaseRequest;
-use App\Models\Post;
 use App\Models\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class RequestController extends Controller
 {
     public function allCauses()
     {
-        $causes = Request::paginate(6);
+        $causes = Request::with('image')->latest()->paginate(6);
 
-        return view('causes.index' , compact('causes'));
+        return view('cases.index', compact('causes'));
     }
 
     public function index()
     {
-        return view('admin.causes.index');
+        return view('admin.cases.index');
     }
 
     public function create()
     {
-        return view('admin.causes.new');
+        return view('admin.cases.new');
     }
+
     public function store(NewCaseRequest $request)
     {
         $data = $request->validated();
+
+        Request::create($data);
+
+        Alert::success(__('Request Created successfully!'));
+
+        return redirect()->route('admin.request.create');
     }
 
     public function show(Request $case)
     {
-        $latest_posts = Post::with('image')->latest()->take(4)->get();
-
-
-        return view('causes.show' , compact('case' , 'latest_posts'));
+        return view('cases.show', compact('case'));
     }
 }

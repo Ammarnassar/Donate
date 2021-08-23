@@ -22,7 +22,7 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="inputName">{{__('Case Title')}}</label>
-                                <input type="text" id="inputName" class="form-control @error('title') is-invalid @enderror">
+                                <input type="text" id="inputName" name="title" class="form-control @error('title') is-invalid @enderror">
                                 @error('title')
                                 <div class="text-danger text-sm">
                                     {{$message}}
@@ -31,7 +31,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputDescription">{{__('Case Details')}}</label>
-                                <textarea id="inputDescription" class="form-control @error('details') is-invalid @enderror" rows="4"></textarea>
+                                <textarea id="inputDescription" name="details" class="form-control @error('details') is-invalid @enderror" rows="4"></textarea>
                                 @error('details')
                                 <div class="text-danger text-sm">
                                     {{$message}}
@@ -40,7 +40,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputStatus">{{__('Status')}}</label>
-                                <select id="inputStatus" class="form-control @error('status') is-invalid @enderror custom-select">
+                                <select id="inputStatus" name="status" class="form-control @error('status') is-invalid @enderror custom-select">
                                     <option selected disabled>{{__('Select one')}}</option>
                                     <option value="progress">{{__('In Progress')}}</option>
                                     <option value="finished">{{__('Finished')}}</option>
@@ -51,6 +51,23 @@
                                 </div>
                                 @enderror
                             </div>
+
+                            <div class="form-group">
+                                <label for="inputStatus">{{__('Category')}}</label>
+                                <select id="inputStatus" name="category_id" class="form-control @error('status') is-invalid @enderror custom-select">
+                                    <option value="" selected disabled>{{__('Select one')}}</option>
+
+                                    @foreach($categories as $category)
+                                        <option value="{{$category->id}}">{{__(ucfirst($category->title))}}</option>
+                                    @endforeach
+                                </select>
+                                @error('status')
+                                <div class="text-danger text-sm">
+                                    {{$message}}
+                                </div>
+                                @enderror
+                            </div>
+
                         </div>
                         <!-- /.card-body -->
                     </div>
@@ -69,7 +86,7 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="inputEstimatedBudget">{{__('Case Goal')}}</label>
-                                <input type="number" id="inputEstimatedBudget" class="@error('goal') is-invalid @enderror form-control">
+                                <input type="number" name="goal" id="inputEstimatedBudget" class="@error('goal') is-invalid @enderror form-control">
                                 @error('goal')
                                 <div class="text-danger text-sm">
                                     {{$message}}
@@ -78,7 +95,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputSpentBudget">{{__('Case Raised')}}</label>
-                                <input type="number" id="inputSpentBudget" class="@error('raiser') is-invalid @enderror form-control">
+                                <input type="number" name="raised" id="inputSpentBudget" class="@error('raiser') is-invalid @enderror form-control">
                                 @error('raised')
                                 <div class="text-danger text-sm">
                                     {{$message}}

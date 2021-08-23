@@ -5,12 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class RequestCategory extends Model
+class Category extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
 
     public function requests()
     {
         return $this->hasMany(Request::class);
+    }
+
+    protected function getTitleAttribute()
+    {
+        return ucfirst(__($this->attributes['title']));
     }
 }

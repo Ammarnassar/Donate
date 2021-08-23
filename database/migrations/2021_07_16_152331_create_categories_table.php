@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRequestCategoriesTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,19 @@ class CreateRequestCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('request_categories', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
             $table->timestamps();
         });
+
+        \App\Models\Category::insert([
+            ['title' => 'health'],
+            ['title' => 'education'],
+            ['title' => 'house'],
+            ['title' => 'clothes'],
+            ['title' => 'rent'],
+        ]);
     }
 
     /**

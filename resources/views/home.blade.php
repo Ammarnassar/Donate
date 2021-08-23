@@ -10,7 +10,7 @@
                         <div class="banner-text">
                             <h1>{{__('We Encourage Participating in Charity!')}}</h1>
                             <p>{{__('Engaging in a charity can give you a good feeling! Your contribution can make you more complete. Millions of children need your support.')}}</p>
-                            <a class="default-btn" href="#">{{__('Join with us')}}</a>
+                            <a class="default-btn" href="{{route('case.all')}}">{{__('Donate Now')}}</a>
                         </div>
                     </div>
                     <div class="col-lg-6 p-0">
@@ -111,7 +111,6 @@
                 <div class="col-lg-6">
                     <div class="about-text ptb-100">
                         <h2>{{__('A Dream in their Mind is Our Mission')}}</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem Ipsum is simply.</p>
                         <ul>
                             <li>
                                 <i class="flaticon-check-mark " style="clear: right"></i>
@@ -142,11 +141,18 @@
     <section class="active-campaing-area pt-100">
         <div class="container">
             <div class="section-title">
-                <h2>{{__('Some Causes')}}</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+                <h2>{{__('Latest Cases')}}</h2>
             </div>
-            <div class="campaing-wrap owl-carousel owl-theme">
-                <x-case-card :case="\App\Models\Request::first()" image="temp/nivo/assets/img/campaing/2.jpg"/>
+            <div class="campaing-wrap owl-carousel owl-theme text-center ">
+                @forelse($cases as $case)
+                <x-case-card :case="$case" image="temp/nivo/assets/img/campaing/2.jpg"/>
+
+                @empty
+                    <div class="d-flex align-items-center justify-content-center text-center  ">
+                        {{__('No Cases !')}}
+                    </div>
+                @endforelse
+
             </div>
         </div>
         <div class=" shape shape-1">
@@ -160,9 +166,7 @@
         <div class="container">
             <div class="help-title">
                 <h2>{{__('Small Actions Lead To Big changes')}}</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
-                <a class="default-btn" href="donate.html">{{__('Donate Now')}}</a>
-                <a class="default-btn join" href="#">{{__('Join Now')}}</a>
+                <a class="default-btn" href="{{route('case.all')}}">{{__('Donate Now')}}</a>
             </div>
         </div>
     </section>
@@ -180,22 +184,18 @@
                 <div class="col-lg-6">
                     <div class="get-started-title">
                         <h2>{{__('Our Fundraise Plans')}}</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="get-started-list">
+                    <div class="get-started-list ">
                         <img src="{{asset('temp/nivo/assets/img/get-started/1.png')}}" alt="Started">
-                        <h3>{{__('Education For Children')}}</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                        <h3 class="text-dark">{{__('Education For Children')}}</h3>
                     </div>
                     <div class="get-started-list">
                         <img src="{{asset('temp/nivo/assets/img/get-started/2.png')}}" alt="Started">
-                        <h3>{{__('Home For Homeless People')}}</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                        <h3 class="text-dark">{{__('Home For Homeless People')}}</h3>
                     </div>
                     <div class="get-started-list">
                         <img src="{{asset('temp/nivo/assets/img/get-started/3.png')}}" alt="Started">
-                        <h3>{{__('Free Medical Services')}}</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                        <h3 class="text-dark">{{__('Free Medical Services')}}</h3>
                     </div>
                     <a class="default-btn" href="{{route('about')}}">
                         {{__('Learn More')}}
@@ -213,10 +213,6 @@
                 <div class="col-lg-7">
                     <div class="organaization-text">
                         <h2>{{__('Small Growing charity organaization wants to raise money')}}</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis  suspendisse  gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem Ipsum is simple dummy text of the printing and typesetting industry.</p>
-                        <a class="default-btn" href="donate.html">
-                            {{__('How To Donate')}}
-                        </a>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -229,146 +225,55 @@
     </section>
     <!-- End Organization Area -->
 
-    <!-- Start Testimonial Area -->
-    <section class="testimonial-area">
-        <div class="container">
-            <div class="section-title">
-                <h2>{{__('Their Thoughts  About Our Work')}}</h2>
-            </div>
-            <div class="row">
-                <div class="testimonial-wrap owl-carousel owl-theme">
-                    <div class="single-testimonial">
-                        <img src="{{asset('temp/nivo/assets/img/testimonial/1.jpg')}}" alt="Testimonial">
-                        <h3>James Thomas</h3>
-                        <i class="flaticon-left-quote"></i>
-                        <p>Lorem ipsum dolor sit amet, consectet adipiscing  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum </p>
-                    </div>
-                    <div class="single-testimonial">
-                        <img src="{{asset('temp/nivo/assets/img/testimonial/2.jpg')}}" alt="Testimonial">
-                        <h3>Thomas Juhon</h3>
-                        <i class="flaticon-left-quote"></i>
-                        <p>Lorem ipsum dolor sit amet, consectet adipiscing  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum </p>
-                    </div>
-                    <div class="single-testimonial">
-                        <img src="{{asset('temp/nivo/assets/img/testimonial/3.jpg')}}" alt="Testimonial">
-                        <h3>James Thomas</h3>
-                        <i class="flaticon-left-quote"></i>
-                        <p>Lorem ipsum dolor sit amet, consectet adipiscing  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="shape shape-8">
-            <img src="{{asset('temp/nivo/assets/img/shape/8.png')}}" alt="Shape">
-        </div>
-    </section>
-    <!-- End Testimonial Area -->
+{{--    <!-- Start Testimonial Area -->--}}
+{{--    <section class="testimonial-area">--}}
+{{--        <div class="container">--}}
+{{--            <div class="section-title">--}}
+{{--                <h2>{{__('Their Thoughts  About Our Work')}}</h2>--}}
+{{--            </div>--}}
+{{--            <div class="row">--}}
+{{--                <div class="testimonial-wrap owl-carousel owl-theme">--}}
+{{--                    <div class="single-testimonial">--}}
+{{--                        <img src="{{asset('temp/nivo/assets/img/testimonial/1.jpg')}}" alt="Testimonial">--}}
+{{--                        <h3>James Thomas</h3>--}}
+{{--                        <i class="flaticon-left-quote"></i>--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectet adipiscing  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum </p>--}}
+{{--                    </div>--}}
+{{--                    <div class="single-testimonial">--}}
+{{--                        <img src="{{asset('temp/nivo/assets/img/testimonial/2.jpg')}}" alt="Testimonial">--}}
+{{--                        <h3>Thomas Juhon</h3>--}}
+{{--                        <i class="flaticon-left-quote"></i>--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectet adipiscing  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum </p>--}}
+{{--                    </div>--}}
+{{--                    <div class="single-testimonial">--}}
+{{--                        <img src="{{asset('temp/nivo/assets/img/testimonial/3.jpg')}}" alt="Testimonial">--}}
+{{--                        <h3>James Thomas</h3>--}}
+{{--                        <i class="flaticon-left-quote"></i>--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectet adipiscing  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="shape shape-8">--}}
+{{--            <img src="{{asset('temp/nivo/assets/img/shape/8.png')}}" alt="Shape">--}}
+{{--        </div>--}}
+{{--    </section>--}}
+{{--    <!-- End Testimonial Area -->--}}
 
     <!-- Start Latest News Area -->
     <section class="latest-news-area">
         <div class="container">
             <div class="section-title">
-                <h2>{{__('Some of The Recent Stories')}}</h2>
+                <h2>{{__('Latest Posts')}}</h2>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-news">
-                        <div class="news-img">
-                            <a href="blog-details.html">
-                                <img src="{{asset('temp/nivo/assets/img/news/1.jpg')}}" alt="News">
-                            </a>
-                            <div class="date">
-                                <span>1 November</span>
-                            </div>
-                        </div>
-                        <div class="news-text">
-                            <ul>
-                                <li>
-                                    <i class="flaticon-man-user"></i>
-                                    By
-                                    <a href="#">Admin</a>
-                                </li>
-                                <li>
-                                    <i class="flaticon-speech-bubbles-comment-option"></i>
-                                    <a href="#">3 Comments</a>
-                                </li>
-                            </ul>
-                            <h3>
-                                <a href="blog-details.html">Highlight of the fundraisings</a>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                            <a class="read-more" href="blog-details.html">
-                                Read More
-                            </a>
-                        </div>
+                @forelse($latest_posts->take(3) as $post)
+                <x-post-card :post="$post" />
+                @empty
+                    <div class="text-center">
+                        {{__('No Posts !')}}
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-news">
-                        <div class="news-img">
-                            <a href="blog-details.html">
-                                <img src="{{asset('temp/nivo/assets/img/news/2.jpg')}}" alt="News">
-                            </a>
-                            <div class="date">
-                                <span>2 November</span>
-                            </div>
-                        </div>
-                        <div class="news-text">
-                            <ul>
-                                <li>
-                                    <i class="flaticon-man-user"></i>
-                                    By
-                                    <a href="#">Admin</a>
-                                </li>
-                                <li>
-                                    <i class="flaticon-speech-bubbles-comment-option"></i>
-                                    <a href="#">3 Comments</a>
-                                </li>
-                            </ul>
-                            <h3>
-                                <a href="blog-details.html">
-                                    A place start a new life with peace
-                                </a>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                            <a class="read-more" href="blog-details.html">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-                    <div class="single-news">
-                        <div class="news-img">
-                            <a href="blog-details.html">
-                                <img src="{{asset('temp/nivo/assets/img/news/3.jpg')}}" alt="News">
-                            </a>
-                            <div class="date">
-                                <span>3 November</span>
-                            </div>
-                        </div>
-                        <div class="news-text">
-                            <ul>
-                                <li>
-                                    <i class="flaticon-man-user"></i>
-                                    By
-                                    <a href="#">Admin</a>
-                                </li>
-                                <li>
-                                    <i class="flaticon-speech-bubbles-comment-option"></i>
-                                    <a href="#">3 Comments</a>
-                                </li>
-                            </ul>
-                            <h3>
-                                <a href="blog-details.html">Build a school for poor children</a>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                            <a class="read-more" href="blog-details.html">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforelse
             </div>
         </div>
     </section>

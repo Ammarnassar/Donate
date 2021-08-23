@@ -20,6 +20,7 @@ class CreateRequestsTable extends Migration
             $table->string('status');
             $table->integer('raised')->default(0);
             $table->integer('goal')->default(0);
+            $table->foreignId('category_id')->constrained();
             $table->timestamps();
         });
     }

@@ -27,10 +27,9 @@
         <h3 class="widget-title">{{__('Case Categories')}}</h3>
 
         <ul>
-            <li><a href="#">Education (10)</a></li>
-            <li><a href="#">Sports (10)</a></li>
-            <li><a href="#">Megazine (12)</a></li>
-            <li><a href="#">Health (16)</a></li>
+            @foreach($categories as $category)
+            <li><a href="#">{{$category->title}} ({{$category->requests_count}})</a></li>
+            @endforeach
         </ul>
     </section>
 

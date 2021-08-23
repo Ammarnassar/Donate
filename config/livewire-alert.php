@@ -7,7 +7,8 @@ return [
         'toast' => false,
         'text' => null,
         'showCancelButton' => false,
-        'showConfirmButton' => false
+        'showConfirmButton' => false,
+        'padding' => 'auto'
     ],
     'confirm' => [
         'icon' => 'warning',

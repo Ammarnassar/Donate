@@ -4,52 +4,45 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PostController extends Controller
 {
-    /**
-     *
-     * Display a listing of the resource.
-     *
-     */
-    public function index()
+
+    public function addPosts()
     {
-        $posts = Post::with('image')->paginate(6);
+        $posts = Post::with('image')->latest()->paginate(6);
 
         return view('blog.index' , compact('posts'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function index()
+    {
+        return view('admin.posts.index');
+    }
+
     public function create()
     {
-        //
+        return view('admin.posts.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'title' => 'required|string',
+            'body' => 'required',
+        ]);
+
+        Post::create($data);
+
+        Alert::success(__('Post Created successfully!'));
+
+        return redirect()->route('admin.post.create');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     *
-     */
     public function show(Post $post)
     {
-        $latest_posts = Post::with('image')->latest()->take(4)->get();
-
-        return view('blog.show' , compact('post' , 'latest_posts'));
+        return view('blog.show' , compact('post'));
     }
 
     /**

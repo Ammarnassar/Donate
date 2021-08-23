@@ -10,7 +10,7 @@
         <!-- Menu For Mobile Device -->
         <div class="mobile-nav">
             <a href="{{route('home')}}" class="logo">
-                <img src="{{asset('temp/nivo/assets/img/nivo-logo.png')}}" alt="Nivo Logo">
+                <img src="{{asset('temp/nivo/assets/img/nivo-logo.png')}}" height="200" width="200" alt="Donate Logo">
             </a>
         </div>
 
@@ -20,7 +20,7 @@
                 <nav class="navbar navbar-expand-md navbar-light">
                     <div class="container">
                         <a class="navbar-brand" href="{{route('home')}}">
-                            <img src="{{asset('temp/nivo/assets/img/nivo-logo.png')}}" alt="Nivo Logo">
+                            <img src="{{asset('temp/nivo/assets/img/nivo-logo.png')}}" height="120" width="120" class=" img-fluid" alt="Donate Logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu align-items-center" id="navbarSupportedContent">
@@ -32,7 +32,7 @@
                                     <a href="{{route('about')}}" class="nav-link @if(Route::currentRouteName() == 'about') active @endif">{{__('About')}}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('case.all')}}" class="nav-link @if(Route::currentRouteName() == 'causes.index') active @endif">{{__('Causes')}}</a>
+                                    <a href="{{route('case.all')}}" class="nav-link @if(Route::currentRouteName() == 'cases.index') active @endif">{{__('Cases')}}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{route('blog.index')}}" class="nav-link @if(Route::currentRouteName() == 'blog.index') active @endif">{{__('Blog')}}</a>
@@ -65,7 +65,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="{{route('donate')}}" class="donate">{{__('Donate Now')}}</a>
+                                <a href="{{route('case.all')}}" class="donate">{{__('Donate Now')}}</a>
                             </div>
                         </div>
                     </div>

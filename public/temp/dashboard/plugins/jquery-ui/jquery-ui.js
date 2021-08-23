@@ -4738,7 +4738,7 @@ var widgetsAccordion = $.widget( "ui.accordion", {
 		options.active = collapsing ? false : this.headers.index( clicked );
 
 		// When the call to ._toggle() comes after the class changes
-		// it causes a very odd bug in IE 8 (see #6720)
+		// it cases a very odd bug in IE 8 (see #6720)
 		this.active = clickedIsActive ? $() : clicked;
 		this._toggle( eventData );
 
@@ -5014,7 +5014,7 @@ var widgetsMenu = $.widget( "ui.menu", {
 			"mouseenter .ui-menu-item": function( event ) {
 
 				// Ignore mouse events while typeahead is active, see #10458.
-				// Prevents focusing the wrong item when typeahead causes a scroll while the mouse
+				// Prevents focusing the wrong item when typeahead cases a scroll while the mouse
 				// is over an item in the menu
 				if ( this.previousFilter ) {
 					return;
@@ -5685,7 +5685,7 @@ $.widget( "ui.autocomplete", {
 					if ( this.menu.active ) {
 
 						// #6055 - Opera still allows the keypress to occur
-						// which causes forms to submit
+						// which cases forms to submit
 						suppressKeyPress = true;
 						event.preventDefault();
 						this.menu.select( event );
@@ -9729,7 +9729,7 @@ $.widget( "ui.draggable", $.ui.mouse, {
 			$.ui.ddmanager.prepareOffsets( this, event );
 		}
 
-		// Execute the drag once - this causes the helper not to be visible before getting its
+		// Execute the drag once - this cases the helper not to be visible before getting its
 		// correct position
 		this._mouseDrag( event, true );
 
@@ -12332,7 +12332,7 @@ $.widget( "ui.dialog", {
 
 				// Don't prevent click on close button (#8838)
 				// Focusing a dialog that is partially scrolled out of view
-				// causes the browser to scroll it into view, preventing the click event
+				// cases the browser to scroll it into view, preventing the click event
 				if ( !$( event.target ).closest( ".ui-dialog-titlebar-close" ) ) {
 
 					// Dialog isn't getting focus when dragging (#8063)
@@ -13220,7 +13220,7 @@ $.ui.ddmanager = {
 	},
 	dragStart: function( draggable, event ) {
 
-		// Listen for scrolling so that if the dragging causes scrolling the position of the
+		// Listen for scrolling so that if the dragging cases scrolling the position of the
 		// droppables can be recalculated (see #5003)
 		draggable.element.parentsUntil( "body" ).on( "scroll.droppable", function() {
 			if ( !draggable.options.refreshPositions ) {
@@ -15505,7 +15505,7 @@ var widgetsSortable = $.widget( "ui.sortable", $.ui.mouse, {
 
 		this._addClass( this.helper, "ui-sortable-helper" );
 
-		// Execute the drag once - this causes the helper not to be visiblebefore getting its
+		// Execute the drag once - this cases the helper not to be visiblebefore getting its
 		// correct position
 		this._mouseDrag( event );
 		return true;

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use App\Models\Request;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -27,6 +28,7 @@ class RequestFactory extends Factory
             'status' => $this->faker->state,
             'raised' => $this->faker->randomNumber(3 ),
             'goal' => $this->faker->randomNumber(4),
+            'category_id' => Category::all()->random()->id,
         ];
     }
 }

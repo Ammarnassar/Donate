@@ -55,33 +55,7 @@
 
         <!-- Right navbar links -->
         <ul class="navbar-nav custom-navbar-right">
-            <!-- Notifications Dropdown Menu -->
-            <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" href="#">
-                    <i class="far fa-bell"></i>
-                    <span class="badge badge-warning navbar-badge">15</span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                    <span class="dropdown-item dropdown-header">15 {{__('Notifications')}}</span>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">
-                        <i class="fas fa-envelope mr-2"></i> 4 new messages
-                        <span class="float-right text-muted text-sm">3 mins</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">
-                        <i class="fas fa-users mr-2"></i> 8 friend requests
-                        <span class="float-right text-muted text-sm">12 hours</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">
-                        <i class="fas fa-file mr-2"></i> 3 new reports
-                        <span class="float-right text-muted text-sm">2 days</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-                </div>
-            </li>
+
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
                     <i class="fa fa-globe "></i>
@@ -153,7 +127,7 @@
                         <a href="" class="nav-link {{in_array(Route::currentRouteName() , ['admin.request.index' , 'admin.request.create'])?'active':'' }}">
                             <i class="nav-icon fas fa-list"></i>
                             <p>
-                                {{__('Causes')}}
+                                {{__('Cases')}}
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -167,13 +141,13 @@
                             <li class="nav-item">
                                 <a href="{{route('admin.request.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.request.index') active @endif">
                                     <i class="far fa-clone nav-icon"></i>
-                                    <p>{{__('All Causes')}}</p>
+                                    <p>{{__('All Cases')}}</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="pages/widgets.html" class="nav-link">
+                    <li class="nav-item {{in_array(Route::currentRouteName() , ['admin.post.index' , 'admin.post.create'])?'menu-open':'' }}">
+                        <a href="" class="nav-link {{in_array(Route::currentRouteName() , ['admin.post.index' , 'admin.post.create'])?'active':'' }}">
                             <i class="nav-icon fas fa-pen"></i>
                             <p>
                                 {{__('Posts')}}
@@ -182,21 +156,21 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link active">
+                                <a href="{{route('admin.post.create')}}" class="nav-link @if(Route::currentRouteName() == 'admin.post.create') active @endif">
                                     <i class="fas fa-plus-circle nav-icon"></i>
                                     <p>{{__('New Post')}}</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
+                                <a href="{{route('admin.post.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.post.index') active @endif">
                                     <i class="far fa-clone nav-icon"></i>
                                     <p>{{__('All Posts')}}</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="pages/widgets.html" class="nav-link">
+                    <li class="nav-item @if(Route::currentRouteName() == 'admin.donations.index') menu-open @endif">
+                        <a href="" class="nav-link @if(Route::currentRouteName() == 'admin.donations.index') active @endif">
                             <i class="nav-icon fas fa-donate"></i>
                             <p>
                                 {{__('Donations')}}
@@ -205,33 +179,17 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
+                                <a href="{{route('admin.donations.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.donations.index') active @endif">
                                     <i class="far fa-clone nav-icon"></i>
                                     <p>{{__('All Donations')}}</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="pages/widgets.html" class="nav-link">
-                            <i class="nav-icon fas fa-hands-helping"></i>
-                            <p>
-                                {{__('Volunteers')}}
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
-                                    <i class="far fa-clone nav-icon"></i>
-                                    <p>{{__('All Volunteers')}}</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="nav-header">{{__('Other')}}</li>
-                    <li class="nav-item">
-                        <a href="pages/widgets.html" class="nav-link">
+
+                    <li class="nav-item {{in_array(Route::currentRouteName() , ['admin.admin.index' , 'admin.admin.create'])?'menu-open':'' }}">
+                        <a href="" class="nav-link {{in_array(Route::currentRouteName() , ['admin.admin.index' , 'admin.admin.create'])?'active':'' }}">
                             <i class="nav-icon fas fa-users-cog"></i>
                             <p>
                                 {{__('Admins')}}
@@ -240,13 +198,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link active">
+                                <a href="{{route('admin.admin.create')}}" class="nav-link @if(Route::currentRouteName() == 'admin.admin.create') active @endif">
                                     <i class="fas fa-plus-circle nav-icon"></i>
                                     <p>{{__('New Admin')}}</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
+                                <a href="{{route('admin.admin.index')}}" class="nav-link @if(Route::currentRouteName() == 'admin.admin.index') active @endif">
                                     <i class="far fa-clone nav-icon"></i>
                                     <p>{{__('All Admins')}}</p>
                                 </a>
@@ -282,6 +240,7 @@
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+@include('sweetalert::alert')
 
 <x-livewire-alert::scripts />
 

@@ -1480,7 +1480,7 @@
             }
 
             // cachedCursor is used to save the old position of the cursor
-            // when * or # causes vim to seek for the nearest word and shift
+            // when * or # cases vim to seek for the nearest word and shift
             // the cursor before entering the motion.
             vimGlobalState.jumpList.cachedCursor = cm.getCursor();
             cm.setCursor(word.start);

@@ -711,7 +711,7 @@ var i,
 
 	// Used for iframes
 	// See setDocument()
-	// Removing the function wrapper causes a "Permission Denied"
+	// Removing the function wrapper cases a "Permission Denied"
 	// error in IE
 	unloadHandler = function() {
 		setDocument();
@@ -5950,7 +5950,7 @@ jQuery.fn.extend( {
 var
 
 	// Support: IE <=10 - 11, Edge 12 - 13 only
-	// In IE/Edge using regex groups here causes severe slowdowns.
+	// In IE/Edge using regex groups here cases severe slowdowns.
 	// See https://connect.microsoft.com/IE/feedback/details/1736512/
 	rnoInnerhtml = /<script|<style|<link/i,
 
@@ -6550,7 +6550,7 @@ var rboxStyle = new RegExp( cssExpand.join( "|" ), "i" );
 				// Support: Android 8 Chrome 86+
 				// In our bodyBackground.html iframe,
 				// display for all div elements is set to "inline",
-				// which causes a problem only in Android 8 Chrome 86.
+				// which cases a problem only in Android 8 Chrome 86.
 				// Ensuring the div is display: block
 				// gets around this issue.
 				trChild.style.display = "block";

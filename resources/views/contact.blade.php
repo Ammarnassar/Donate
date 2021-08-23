@@ -22,8 +22,7 @@
                         <i class="fa fa-envelope"></i>
                         <div class="contect-title">
                             <h3>{{__('Email')}}</h3>
-                            <a href="mailto:hello@nivo.com">hello@nivo.com</a>
-                            <a href="mailto:info@nivo.com">info@nivo.com</a>
+                            <a href="mailto:hello@nivo.com">info@doante.com</a>
                         </div>
                     </div>
                 </div>
@@ -32,8 +31,7 @@
                         <i class="fa fa-phone"></i>
                         <div class="contect-title">
                             <h3>{{__('Phone')}}</h3>
-                            <a href="tel:+44-587-154756">+44 587 154756</a>
-                            <a href="tel:+44-587-154756">+55 5555 14574</a>
+                            <a href="tel:+44-587-154756">+962788838370</a>
                         </div>
                     </div>
                 </div>

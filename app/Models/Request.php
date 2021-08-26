@@ -10,7 +10,23 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 class Request extends Model
 {
+    protected static function boot()
+    {
+        parent::boot();
+
+        self::deleting(function (self $request) {
+
+            if ($request->donations()->exists()) {
+
+                $request->donations->each->delete();
+            }
+        });
+    }
+
     use HasFactory;
+
+    protected $table = 'requests';
+
 
     protected $guarded = ['id'];
 
@@ -19,14 +35,14 @@ class Request extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function image() : MorphOne
+    public function image(): MorphOne
     {
-        return $this->morphOne(Image::class , 'imageable')->withDefault([
+        return $this->morphOne(Image::class, 'imageable')->withDefault([
             'url' => ''
         ]);
     }
 
-    public function donations() : HasMany
+    public function donations(): HasMany
     {
         return $this->hasMany(Donation::class);
     }

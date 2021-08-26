@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Livewire\Component;
 use Livewire\WithPagination;
+use App\Models\Request;
 
 class IndexItem extends Component
 {
@@ -21,7 +22,8 @@ class IndexItem extends Component
     protected $paginationTheme = 'bootstrap';
 
     protected $listeners = [
-        'confirmed' => 'delete'
+        'confirmed' => 'delete',
+        'requestUpdated' => '$refresh'
     ];
 
     public function render()
@@ -34,7 +36,14 @@ class IndexItem extends Component
 
     public function delete()
     {
-        DB::table(strtolower($this->name))->delete($this->item_id);
+        if (strtolower($this->name) == 'requests') {
+            Request::findOrFail($this->item_id)->delete();
+        } else {
+            Str::singular(ucfirst($this->name))::findOrFail($this->item_id)->delete();
+
+        }
+
+//        DB::table(strtolower($this->name))->delete($this->item_id);
 
         $this->alert(
             'success',
@@ -46,16 +55,19 @@ class IndexItem extends Component
     {
         $this->item_id = $id;
 
-        $this->confirm(__('Are you sure to delete this item ?'), [
+        $alert_options = [
             'toast' => false,
             'position' => 'center',
+            'text' => (strtolower($this->name) == 'requests' ? 'ملاحظة : سيتم حذف التبرعات المرتبطة بهذه الحالة' : ''),
             'showConfirmButton' => true,
             'cancelButtonText' => __('Cancel'),
             'confirmButtonText' => __('Confirm'),
             'confirmButtonColor' => 'rgb(221, 51, 51)',
             'cancelButtonColor' => 'rgb(48, 133, 214)',
             'onConfirmed' => 'confirmed',
-        ]);
+        ];
+
+        $this->confirm(__('Are you sure to delete this item ?'), $alert_options);
 
 
     }

@@ -165,5 +165,8 @@
     "Help" : "مساعدة",
     "Some Of Our Numbers" : "بعض من أرقامنا",
     "No Posts !" : "لا يوجد منشورات",
-    "No Cases !" : "لا يوجد حالات"
+    "No Cases !" : "لا يوجد حالات",
+    "Edit Row" : "تعديل العنصر",
+    "Request Updated Successfully !" : "تم تعديل الحالة بنجاح !"
+
 }

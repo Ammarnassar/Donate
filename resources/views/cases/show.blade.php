@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('main')
-    @include('layouts.page-title' , ['pageRoute' => route('case.show' , $case->id) , 'currentPageName' => $case->title , 'previousPageName' => 'Causes' , 'previousPageRoute' => 'case.all' , 'background' => '/temp/nivo/assets/img/page-banner/5.jpg'])
+    @include('layouts.page-title' , ['pageRoute' => route('case.show' , $case->id) , 'currentPageName' => $case->title , 'previousPageName' => 'Cases' , 'previousPageRoute' => 'case.all' , 'background' => '/temp/nivo/assets/img/page-banner/5.jpg'])
 
     <!-- Start Blog Details Area -->
     <section class="blog-details-area ptb-100">

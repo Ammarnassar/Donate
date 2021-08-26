@@ -40,18 +40,20 @@
                             <td>{{$row->$col}}</td>
                         @endfor
                         <td class="d-flex align-items-center justify-content-center">
-                            <a class="btn btn-link bg-success" data-toggle="modal"
-                               data-target="#editModal-{{$row->id}}">
-                                <i class="fas fa-edit text-white"></i>
-                            </a>
+                            @if(strtolower($name) == 'requests')
+                                <a class="btn btn-link bg-success" data-toggle="modal"
+                                   data-target="#editModal-{{$row->id}}">
+                                    <i class="fas fa-edit text-white"></i>
+                                </a>
+
+                                <livewire:edit-request :row="$row" :key="$row->id"/>
+                            @endif
                             <span class="mx-2"></span>
                             <a class="btn btn-link bg-danger" wire:click="confirmedDelete({{$row->id}})">
                                 <i class="far fa-trash-alt text-white"></i>
                             </a>
 
-                            {{--                            @if(strtolower($name) == 'posts')--}}
-                            {{--                            <livewire:post.edit-post :row="$row" :key="$row->id"/>--}}
-                            {{--                            @endif--}}
+
                         </td>
                     </tr>
                 @endforeach

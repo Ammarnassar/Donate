@@ -2,12 +2,11 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Livewire\Component;
 use Livewire\WithPagination;
-use App\Models\Request;
-use App\Models\Post;
 
 class IndexItem extends Component
 {
@@ -39,11 +38,8 @@ class IndexItem extends Component
     {
         if (strtolower($this->name) == 'requests') {
             Request::findOrFail($this->item_id)->delete();
-        } elseif(strtolower($this->name) == 'posts') {
-            Post::findOrFail($this->item_id)->delete();
-
-        }else{
-            Str::singular(ucfirst($this->name))::findOrFail($this->item_id)->delete();
+        } else {
+            DB::table(strtolower($this->name))->where('id', $this->item_id)->delete();
         }
 
         $this->alert(

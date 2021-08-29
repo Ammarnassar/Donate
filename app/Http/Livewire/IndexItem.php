@@ -39,6 +39,7 @@ class IndexItem extends Component
         if (strtolower($this->name) == 'requests') {
             Request::findOrFail($this->item_id)->delete();
         } else {
+
             DB::table(strtolower($this->name))->where('id', $this->item_id)->delete();
         }
 

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
@@ -23,6 +24,7 @@ Route::group([
     Route::get('/' , [HomeController::class , 'home'])->name('home');
     Route::view('about' , 'about')->name('about');
     Route::view('contact' , 'contact')->name('contact');
+    Route::post('contact' , [ContactController::class , 'contact'])->name('contact.case');
 
     Route::group(['as' => 'case.' , 'prefix' => 'case'] , function (){
         Route::get('all' , [RequestController::class , 'allCauses'])->name('all');
@@ -45,6 +47,7 @@ Route::group([
         Route::get('/' , [AdminController::class , 'dashboardHome'])->name('index');
         Route::resource('/post' , PostController::class);
         Route::resource('/request' , RequestController::class);
+        Route::view('contacts' , 'admin.cases.contact-cases')->name('contact');
         Route::resource('/admin' , AdminController::class);
         Route::get('/donations' , [DonationController::class , 'index' ])->name('donations.index');
     });

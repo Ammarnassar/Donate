@@ -38,7 +38,7 @@
                                     <a href="{{route('blog.index')}}" class="nav-link @if(Route::currentRouteName() == 'blog.index') active @endif">{{__('Blog')}}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('contact')}}" class="nav-link @if(Route::currentRouteName() == 'contact') active @endif">{{__('Contact')}}</a>
+                                    <a href="{{route('contact')}}" class="nav-link @if(Route::currentRouteName() == 'contact') active @endif">{{__('Contact Us to add case')}}</a>
                                 </li>
                                 <li class="nav-item d-inline-block d-md-none">
                                     <div class="d-flex align-items-center justify-content-center">

@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Request;
+use App\Models\Post;
 
 class IndexItem extends Component
 {
@@ -38,12 +39,12 @@ class IndexItem extends Component
     {
         if (strtolower($this->name) == 'requests') {
             Request::findOrFail($this->item_id)->delete();
-        } else {
+        } elseif(strtolower($this->name) == 'posts') {
+            Post::findOrFail($this->item_id)->delete();
+
+        }else{
             Str::singular(ucfirst($this->name))::findOrFail($this->item_id)->delete();
-
         }
-
-//        DB::table(strtolower($this->name))->delete($this->item_id);
 
         $this->alert(
             'success',

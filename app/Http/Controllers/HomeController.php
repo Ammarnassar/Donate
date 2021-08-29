@@ -11,7 +11,7 @@ class HomeController extends Controller
     {
         $cases = Request::with('image')->latest()->take(3)->get();
 
-//        dd($cases);
         return view('home' , compact('cases'));
     }
+
 }

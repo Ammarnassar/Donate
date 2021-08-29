@@ -6,7 +6,7 @@
             </div>
 
             <div class="w-25 @if(App::getLocale() == 'ar') text-left @else text-right @endif">
-                @if(strtolower($name) != 'donations')
+                @if(!in_array(strtolower($name) , ['contacts' , 'donations']))
                     @if(strtolower($name) == 'users') @php $name = 'Admin' @endphp @endif
                     <a href="{{route('admin.'.strtolower(Str::singular($name)).'.create')}}" class=" btn btn-primary">
                         {{__('Add New').' '.__(Str::singular($name))}}

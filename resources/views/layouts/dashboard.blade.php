@@ -75,21 +75,14 @@
             </li>
             <li class="nav-item dropdown user-menu">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                    <img src="{{asset('temp/dashboard/dist/img/user2-160x160.jpg')}}" class="user-image img-circle elevation-2" alt="User Image">
+                    <img src="{{auth()->user()->image}}" class="user-image img-circle elevation-2" alt="User Image">
                     <span class="d-none d-md-inline">{{auth()->user()->name}}</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right w-auto p-1">
-                   <li class="dropdown-item d-flex align-items-center ">
-                       <i class="fas fa-user-alt"> </i>
-                       <span class="ml-2">Profile</span>
-                   </li>
-                    <li class="dropdown-divider">
-
-                    </li>
                     <li class="dropdown-item d-flex align-items-center ">
                         <a href="{{route('logout')}}" class="text-dark">
                             <i class="fas fa-sign-out-alt"> </i>
-                            <span class="ml-2">Logout</span>
+                            <span class="ml-2">{{__('Logout')}}</span>
                         </a>
                     </li>
                 </ul>
@@ -123,8 +116,8 @@
                         </a>
 
                     </li>
-                    <li class="nav-item  {{in_array(Route::currentRouteName() , ['admin.request.index' , 'admin.request.create'])?'menu-open':'' }} ">
-                        <a href="" class="nav-link {{in_array(Route::currentRouteName() , ['admin.request.index' , 'admin.request.create'])?'active':'' }}">
+                    <li class="nav-item  {{in_array(Route::currentRouteName() , ['admin.request.index' , 'admin.request.create' , 'admin.contact'])?'menu-open':'' }} ">
+                        <a href="" class="nav-link {{in_array(Route::currentRouteName() , ['admin.request.index' , 'admin.request.create' , 'admin.contact'])?'active':'' }}">
                             <i class="nav-icon fas fa-list"></i>
                             <p>
                                 {{__('Cases')}}
@@ -132,6 +125,12 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{route('admin.contact')}}" class="nav-link @if(Route::currentRouteName() == 'admin.contact') active @endif">
+                                    <i class="fas fa-address-card nav-icon"></i>
+                                    <p>{{__('All Contact Cases')}}</p>
+                                </a>
+                            </li>
                             <li class="nav-item">
                                 <a href="{{route('admin.request.create')}}" class="nav-link @if(Route::currentRouteName() == 'admin.request.create') active @endif">
                                     <i class="fas fa-plus-circle nav-icon"></i>

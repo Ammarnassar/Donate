@@ -29,8 +29,8 @@
     "Read More" : "اقرأ المزيد",
     "Email" : "البريد الإلكتروني",
     "Phone" : "رقم الهاتف",
-    "Drop us message for any query" : "أرسل لنا رسالة لأي استفسار",
-    "If you have an idea, we would love to hear about it" : "إذا كانت لديك فكرة ، فنحن نحب أن نسمع عنها",
+    "Drop us your case details" : "أرسل لنا تفاصيل حالتك",
+    "we will share your case in our website" : "سنقوم بالتأكد من حالتك ونشرها على موقعنا لمساعدتك",
     "Your Name" : "اسمك",
     "Your Email" : "بريدك الإلكتروني",
     "Your Phone" : "رقم الهاتف",
@@ -167,6 +167,14 @@
     "No Posts !" : "لا يوجد منشورات",
     "No Cases !" : "لا يوجد حالات",
     "Edit Row" : "تعديل العنصر",
-    "Request Updated Successfully !" : "تم تعديل الحالة بنجاح !"
+    "Request Updated Successfully !" : "تم تعديل الحالة بنجاح !",
+    "This Case has Finished" : "تم الإنتهاء من هذه الحالة والحصول على الهدف المطلوب",
+    "Your Case Details" : "تفاصيل حالتك",
+    "Send" : "إرسال",
+    "Contact Us to add case" : "التواصل معنا لإضافة حالة",
+    "Successfully Send Your Case !" : "تم إرسال حالتك بنجاح !",
+    "We will contact with you as soon possible" : "سيتم التواصل معك في أقرب وقت ممكن ",
+    "All Contact Cases" : "جميع طلبات الحالات",
+    "Case_Details" : "تفاصيل الحالة"
 
 }

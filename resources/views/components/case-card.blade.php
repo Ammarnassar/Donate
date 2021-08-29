@@ -15,6 +15,6 @@
         </ul>
         <h3><a href="{{route('case.show' , $case->id)}}">{{$case->title}}</a></h3>
         <p>{{substr($case->details , 0 , 60)}}</p>
-        <a class="read-more" href="">{{__('Read More')}}</a>
+        <a class="read-more" href="{{route('case.show' , $case->id)}}">{{__('Read More')}}</a>
     </div>
 </div>

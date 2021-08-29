@@ -39,9 +39,14 @@ class DonateCard extends Component
 
     public function save()
     {
+
         $data = $this->validate();
 
         $this->case->donations()->create(array_filter($data));
+
+        $this->case->raised = $this->case->raised + (int)$this->amount;
+
+        $this->case->save();
 
         $this->alert('success', __('Thank You !') , [
             'text' => __('Donate Successfully !')

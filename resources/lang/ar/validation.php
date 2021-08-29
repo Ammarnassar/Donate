@@ -160,5 +160,6 @@ return [
         'donateType' => 'نوع التبرع',
         'amount' => 'المبلغ',
         'kindDetails' => 'تفاصبل التبرّع العيني',
+        'case_details' => 'تفاصبل الحالة',
     ],
 ];

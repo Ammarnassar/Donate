@@ -145,7 +145,7 @@
             </div>
             <div class="campaing-wrap owl-carousel owl-theme text-center ">
                 @forelse($cases as $case)
-                <x-case-card :case="$case" image="temp/nivo/assets/img/campaing/2.jpg"/>
+                <x-case-card :case="$case" :image="$case->image"/>
 
                 @empty
                     <div class="d-flex align-items-center justify-content-center text-center  ">

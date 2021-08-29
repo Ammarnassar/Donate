@@ -35,11 +35,9 @@ class Request extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function image(): MorphOne
+    public function getImageAttribute()
     {
-        return $this->morphOne(Image::class, 'imageable')->withDefault([
-            'url' => ''
-        ]);
+        return "/temp/nivo/assets/img/donate.jpg";
     }
 
     public function donations(): HasMany

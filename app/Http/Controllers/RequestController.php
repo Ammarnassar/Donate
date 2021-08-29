@@ -11,7 +11,7 @@ class RequestController extends Controller
 {
     public function allCauses()
     {
-        $causes = Request::with('image')->latest()->paginate(6);
+        $causes = Request::latest()->paginate(6);
 
         return view('cases.index', compact('causes'));
     }

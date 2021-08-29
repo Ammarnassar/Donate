@@ -175,6 +175,8 @@
     "Successfully Send Your Case !" : "تم إرسال حالتك بنجاح !",
     "We will contact with you as soon possible" : "سيتم التواصل معك في أقرب وقت ممكن ",
     "All Contact Cases" : "جميع طلبات الحالات",
-    "Case_Details" : "تفاصيل الحالة"
+    "Case_Details" : "تفاصيل الحالة",
+    "Contact Deleted Successfully !" : "تم حذف الطلب بنجاح !",
+    "Whoops !" : "عذرًا ّ!"
 
 }

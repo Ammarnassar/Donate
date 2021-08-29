@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function home()
     {
-        $cases = Request::with('image')->latest()->take(3)->get();
+        $cases = Request::latest()->take(3)->get();
 
         return view('home' , compact('cases'));
     }

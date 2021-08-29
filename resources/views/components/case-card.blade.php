@@ -1,5 +1,5 @@
 <div class="single-campaing single-news" >
-    <div class="campaing-img news-img">
+    <div class="campaing-img news-img ">
         <img src="{{asset($image)}}" alt="">
         <div class="date" >
             <span>{{ucfirst(__($case->category->title))}}</span>

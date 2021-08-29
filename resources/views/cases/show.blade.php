@@ -12,7 +12,7 @@
                         <div class="article-image">
                             <div class="single-campaing two">
                                 <div class="campaing-img">
-                                    <img src="{{$case->image->url}}" alt="">
+                                    <img src="{{$case->image}}" alt="">
                                 </div>
                                 <div class="campaing-text">
                                     <div class="progress pink">
@@ -33,7 +33,7 @@
                         <div class="bg-primary mt-5 mb-0 text-white p-3 h2 fw-bold text-center">
                             {{__('Donate To This Case')}}
                         </div>
-                        @if($case->status == 'finished' && $case->goal == $case->raised)
+                        @if($case->status == 'finished' || $case->goal == $case->raised)
                             <div class="text-center mt-3">
                                 {{__('This Case has Finished')}}
                             </div>

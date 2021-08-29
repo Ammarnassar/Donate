@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire;
 
-use Illuminate\Support\Str;
 use Livewire\Component;
 
 class DonateCard extends Component
@@ -39,19 +38,26 @@ class DonateCard extends Component
 
     public function save()
     {
+        if ($this->case->raised >= $this->case->goal || $this->case->status == 'finished') {
+            $this->alert('warning', __('Whoops !'), [
+                'text' => __('This Case has Finished')
+            ]);
 
-        $data = $this->validate();
+        } else {
+            $data = $this->validate();
 
-        $this->case->donations()->create(array_filter($data));
+            $this->case->donations()->create(array_filter($data));
 
-        $this->case->raised = $this->case->raised + (int)$this->amount;
+            $this->case->raised = $this->case->raised + (int)$this->amount;
 
-        $this->case->save();
+            $this->case->save();
 
-        $this->alert('success', __('Thank You !') , [
-            'text' => __('Donate Successfully !')
-        ]);
+            $this->alert('success', __('Thank You !'), [
+                'text' => __('Donate Successfully !')
+            ]);
+        }
 
-        $this->reset( 'name' , 'email' , 'phone' , 'type' , 'note' ,'details' , 'amount');
+
+        $this->reset('name', 'email', 'phone', 'type', 'note', 'details', 'amount');
     }
 }

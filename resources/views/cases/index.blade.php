@@ -13,7 +13,7 @@
             <div class="row">
                 @forelse($causes as $case)
                 <div class="col-12 col-md-4">
-                    <x-case-card :case="$case" image="temp/nivo/assets/img/campaing/2.jpg" />
+                    <x-case-card :case="$case" :image="$case->image" />
                 </div>
                 @empty
                     <div class="text-primary text-center">{{__('No Causes !')}}</div>
